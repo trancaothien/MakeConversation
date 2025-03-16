@@ -11,20 +11,21 @@ import SwiftUI
 
 // Router
 protocol SplashRouterProtocol: RouterProtocol {
-
+    func navigateToMain()
 }
 
 // Presenter
 protocol SplashPresenterProtocol: PresenterProtocol {
-
+    func initApplication()
 }
 
 // Interactor
-protocol SplashInteractorProtocol: InteractorProtocol {
-
+protocol SplashInteracterProtocol: InteractorProtocol {
+    func fetchData()
 }
 
 // ViewState
 protocol SplashViewStateProtocol: ViewStateProtocol {
     func set(with presenter: SplashPresenterProtocol)
+    func viewDidLoad()
 }

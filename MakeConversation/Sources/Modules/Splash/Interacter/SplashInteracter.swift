@@ -9,11 +9,6 @@
 
 import Foundation
 
-final class SplashInteractor: SplashInteractorProtocol {
-    
-}
-
-// MARK: Private
-extension SplashInteractor {
-    
+final class SplashInteracter: SplashInteracterProtocol {
+    func fetchData() {}
 }

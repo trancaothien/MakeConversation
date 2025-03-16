@@ -9,13 +9,13 @@
 import SwiftUI
 
 struct SplashView: View {
-           
+    
     @StateObject var viewState: SplashViewState
     
     var body: some View {
-        Text("Hello iOS")
+        Text("Splash Screen")
             .onAppear {
-                
+                self.viewState.viewDidLoad()
             }
     }
 }

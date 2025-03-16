@@ -12,15 +12,27 @@ final class SplashPresenter: SplashPresenterProtocol {
     
     private let router: SplashRouterProtocol
     private weak var viewState: SplashViewStateProtocol?
-    private let interactor: SplashInteractorProtocol
+    private let interacter: SplashInteracterProtocol
     
     init(router: SplashRouterProtocol,
-         interactor: SplashInteractorProtocol,
+         interacter: SplashInteracterProtocol,
          viewState: SplashViewStateProtocol) {
         self.router = router
-        self.interactor = interactor
+        self.interacter = interacter
         self.viewState = viewState
     }
-    
+}
+
+// MARK: Input
+extension SplashPresenter {
+    func initApplication() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+            self.router.navigateToMain()
+        }
+    }
+}
+
+// MARK: Output
+extension SplashPresenter {
     
 }

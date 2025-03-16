@@ -13,7 +13,7 @@ struct MainView: View {
     @StateObject var viewState: MainViewState
     
     var body: some View {
-        Text("Hello iOS")
+        Text("Main Screen")
     }
 }
 

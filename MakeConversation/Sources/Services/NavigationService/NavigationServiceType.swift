@@ -28,4 +28,25 @@ protocol NavigationServiceType: ObservableObject, Identifiable {
     /// The current alert (dialog window), if active.
     /// Can be `nil` if there are no active alerts.
     var alert: CustomAlert? { get set }
+    
+    /// Push a new view onto the navigation stack.
+    func push(_ view: Views)
+    
+    /// Pop the current view from the navigation stack.
+    func pop()
+    
+    /// Replace the entire navigation stack with a new root view.
+    func pushReplace(_ view: Views)
+    
+    /// Present a modal view.
+    func presentModal(_ view: Views)
+    
+    /// Dismiss the current modal.
+    func dismissModal()
+    
+    /// Present a popup view.
+    func presentPopup(_ view: Views)
+    
+    /// Dismiss the current popup.
+    func dismissPopup()
 }

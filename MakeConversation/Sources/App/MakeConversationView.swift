@@ -17,10 +17,8 @@ struct MakeConversationView: View {
         NavigationStack(path: $navigationService.items) {
             appViewBuilder.build(view: .splash)
                 .navigationDestination(for: Views.self) { path in
-                    switch path {
-                    default:
-                        fatalError()
-                    }
+                    appViewBuilder.build(view: path)
+                        .navigationBarBackButtonHidden()
                 }
         }
         .fullScreenCover(item: $navigationService.popupView) { item in
@@ -40,6 +38,5 @@ struct MakeConversationView: View {
                 fatalError()
             }
         }
-        
     }
 }

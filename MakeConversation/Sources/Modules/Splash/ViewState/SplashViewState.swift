@@ -16,3 +16,10 @@ final class SplashViewState: ObservableObject, SplashViewStateProtocol {
         self.presenter = presener
     }
 }
+
+// MARK: Input
+extension SplashViewState {
+    func viewDidLoad() {
+        self.presenter?.initApplication()
+    }
+}

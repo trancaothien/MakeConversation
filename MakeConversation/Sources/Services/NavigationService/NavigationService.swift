@@ -21,6 +21,45 @@ public class NavigationService: NavigationServiceType  {
     @Published var popupView: Views?
     @Published var items: [Views] = []
     @Published var alert: CustomAlert?
+    
+    /// **Push a new view onto the stack**
+    func push(_ view: Views) {
+        if !items.contains(view) {
+            items.append(view)
+        }
+    }
+
+    /// **Pop the current view**
+    func pop() {
+        if !items.isEmpty {
+            items.removeLast()
+        }
+    }
+
+    /// **Replace the entire stack with a new root view (e.g., replace splash with main)**
+    func pushReplace(_ view: Views) {
+        items = [view] // Remove everything and set only the new view
+    }
+
+    /// **Present a modal**
+    func presentModal(_ view: Views) {
+        modalView = view
+    }
+
+    /// **Dismiss the current modal**
+    func dismissModal() {
+        modalView = nil
+    }
+
+    /// **Show a popup view**
+    func presentPopup(_ view: Views) {
+        popupView = view
+    }
+
+    /// **Dismiss the popup view**
+    func dismissPopup() {
+        popupView = nil
+    }
 }
 
 

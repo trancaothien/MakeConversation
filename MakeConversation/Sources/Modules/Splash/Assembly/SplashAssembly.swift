@@ -19,13 +19,13 @@ final class SplashAssembly: Assembly {
         let router = SplashRouter(navigation: navigation)
 
         // Interactor
-        let interactor = SplashInteractor()
+        let interacter = SplashInteracter()
 
         //ViewState
         let viewState =  SplashViewState()
 
         // Presenter
-        let presenter = SplashPresenter(router: router, interactor: interactor, viewState: viewState)
+        let presenter = SplashPresenter(router: router, interacter: interacter, viewState: viewState)
         
         viewState.set(with: presenter)
         

@@ -22,11 +22,11 @@ struct MakeConversationApp: App {
         container.apply(NavigationAssembly.self)
     
         // Modules
+        container.apply(SplashAssembly.self)
+        container.apply(MainAssembly.self)
         container.apply(ContactAssembly.self)
         container.apply(ConversationAssembly.self)
-        container.apply(MainAssembly.self)
         container.apply(SettingAssembly.self)
-        container.apply(SplashAssembly.self)
 
         return container
     }()
@@ -37,12 +37,9 @@ struct MakeConversationApp: App {
         appViewBuilder = ApplicationViewBuilder(container: container)
     }
     
-    
     var body: some Scene {
         WindowGroup {
             MakeConversationView(navigationService: navigationService, appViewBuilder: appViewBuilder)
         }
     }
-    
-    
 }

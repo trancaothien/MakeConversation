@@ -14,5 +14,10 @@ final class SplashRouter: SplashRouterProtocol {
     init(navigation: any NavigationServiceType){
         self.navigation = navigation
     }
-       
+}
+
+extension SplashRouter {
+    func navigateToMain() {
+        self.navigation.pushReplace(.main)
+    }
 }
