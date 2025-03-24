@@ -14,44 +14,26 @@ struct WalkthroughView: View {
         VStack {
             Spacer()
             
-            Image("WalkthroughImage")
-                .padding()
+            Image(.walkthoughCover)
             
-            Text("Connect easily with your family and friends over countries")
-                .font(.custom("Mulish", size: 24))
+            Text("walkthrough.title")
+                .useCustomStyle(size: FontSize.size24, color: .text, weight: .bold)
                 .multilineTextAlignment(.center)
-                .padding()
+                .padding(.top, 40)
             
             Spacer()
             
-            Button("Term & Privacy Policy", action: {
-                termAndPrivacy()
-            })
-                .font(.custom("Mulish", size: 14))
-                .lineSpacing(24 - 14)
-                .foregroundColor(Color("BlackForLightTheme"))
-
-            
-            Button(action: {
-                startMessaging()
-            }) {
-                Text("Start Messaging")
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color("BlueForLightTheme"))
-                    .foregroundColor(.white)
-                    .cornerRadius(30)
+            Button("walkthrough.term.title") {
+                self.viewState.privacyAndServiceDidTap()
             }
-            .padding()
+            .buttonStyle(TextButtonStyle(width: .infinity))
+        
+            Button("walkthrough.button.start") {
+                self.viewState.startMessagingDidTap()
+            }
+            .buttonStyle(FilledButtonStyle(width: .infinity))
         }
-    }
-    
-    func termAndPrivacy() -> Void {
-        print("Clicked on Term & Privacy Policy Button")
-    }
-    
-    func startMessaging() -> Void {
-        print("Clicked on Start Messaging Button")
+        .padding(.horizontal, 24)
     }
 }
 

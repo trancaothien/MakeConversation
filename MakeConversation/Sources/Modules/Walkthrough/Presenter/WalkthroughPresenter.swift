@@ -20,6 +20,17 @@ final class WalkthroughPresenter: WalkthroughPresenterProtocol {
         self.interactor = interactor
         self.viewState = viewState
     }
+}
+
+// MARK: For Router
+extension WalkthroughPresenter {
     
+    func startMessagingDidTap() {
+        self.router.navigateToVerification()
+    }
+    
+    func termAndServiceDidTap() {
+        // TODO: Handle when tap on the term and service button
+    }
     
 }

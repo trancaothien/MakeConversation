@@ -10,12 +10,14 @@ import SwiftUI
 
 // Router
 protocol WalkthroughRouterProtocol: RouterProtocol {
-
+    func navigateToVerification()
+    func navigateToTermAndService()
 }
 
 // Presenter
 protocol WalkthroughPresenterProtocol: PresenterProtocol {
-
+    func startMessagingDidTap()
+    func termAndServiceDidTap()
 }
 
 // Interactor

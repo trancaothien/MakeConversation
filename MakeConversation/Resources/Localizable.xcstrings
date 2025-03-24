@@ -1,0 +1,87 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Back" : {
+
+    },
+    "Chats" : {
+
+    },
+    "Danh sách Chat" : {
+
+    },
+    "Hello iOS / contact view" : {
+
+    },
+    "Hello iOS / Conversation View" : {
+
+    },
+    "Hello iOS / SettingView" : {
+
+    },
+    "No" : {
+
+    },
+    "Splash Screen" : {
+
+    },
+    "Title" : {
+
+    },
+    "walkthrough.button.start" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start Messaging"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bắt đầu nhắn tin"
+          }
+        }
+      }
+    },
+    "walkthrough.term.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms & Privacy Policy"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Điều khoản sử dụng"
+          }
+        }
+      }
+    },
+    "walkthrough.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connect easily with your family and friends over countries"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kết nối dễ dàng với gia đình và bạn bè của bạn trên khắp các quốc gia"
+          }
+        }
+      }
+    },
+    "Yes" : {
+
+    }
+  },
+  "version" : "1.0"
+}

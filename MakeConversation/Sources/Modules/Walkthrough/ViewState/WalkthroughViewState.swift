@@ -14,4 +14,17 @@ final class WalkthroughViewState: ObservableObject, WalkthroughViewStateProtocol
     func set(with presener: WalkthroughPresenterProtocol) {
         self.presenter = presener
     }
+    
+}
+
+// MARK: Function
+extension WalkthroughViewState {
+    
+    func privacyAndServiceDidTap() {
+        // TODO: Handle when user taped on the term and service button
+    }
+    
+    func startMessagingDidTap() {
+        self.presenter?.startMessagingDidTap()
+    }
 }
