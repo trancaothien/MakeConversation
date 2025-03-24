@@ -9,11 +9,10 @@
 import SwiftUI
 
 struct ConversationView: View {
-           
     @StateObject var viewState: ConversationViewState
     
     var body: some View {
-        Text("Hello iOS")
+        Text("Hello iOS / Conversation View")
     }
 }
 

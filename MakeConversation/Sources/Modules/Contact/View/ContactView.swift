@@ -13,7 +13,7 @@ struct ContactView: View {
     @StateObject var viewState: ContactViewState
     
     var body: some View {
-        Text("Hello iOS")
+        Text("Hello iOS / contact view")
     }
 }
 

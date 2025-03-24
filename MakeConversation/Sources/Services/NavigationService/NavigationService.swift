@@ -80,6 +80,7 @@ enum Views: Identifiable, Equatable, Hashable {
     case contact
     case conversation
     case setting
+    case walkthrough
     
     var stringKey: String {
         switch self {
@@ -93,6 +94,8 @@ enum Views: Identifiable, Equatable, Hashable {
             return "conversation"
         case .setting:
             return "setting"
+        case .walkthrough:
+            return "walkthrough"
         }
     }
 }

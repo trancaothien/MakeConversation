@@ -13,7 +13,7 @@ struct SettingView: View {
     @StateObject var viewState: SettingViewState
     
     var body: some View {
-        Text("Hello iOS")
+        Text("Hello iOS / SettingView")
     }
 }
 
