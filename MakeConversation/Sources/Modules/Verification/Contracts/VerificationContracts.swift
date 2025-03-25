@@ -16,7 +16,7 @@ protocol VerificationRouterProtocol: RouterProtocol {
 
 // Presenter
 protocol VerificationPresenterProtocol: PresenterProtocol {
-    func backButtonDidTap()
+    func continueButtonDidTap()
 }
 
 // Interactor

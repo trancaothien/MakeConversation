@@ -17,6 +17,6 @@ final class VerificationRouter: VerificationRouterProtocol {
     }
     
     func backToPreviousScreen() {
-        self.navigation.pop()
+        self.navigation.push(.walkthrough)
     }
 }
