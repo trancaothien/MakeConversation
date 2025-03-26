@@ -30,6 +30,8 @@ final class ApplicationViewBuilder : Assembly, ObservableObject {
             buildWalkthrough()
         case .verification:
             buildVerification()
+        case .verificationOTP:
+            buildVerificationOTP()
         }
     }
     
@@ -66,6 +68,11 @@ final class ApplicationViewBuilder : Assembly, ObservableObject {
     @ViewBuilder
     fileprivate func buildVerification() -> some View {
         container.resolve(VerificationAssembly.self).build()
+    }
+    
+    @ViewBuilder
+    fileprivate func buildVerificationOTP() -> some View {
+        container.resolve(VerificationOTPAssembly.self).build()
     }
     
 }

@@ -29,6 +29,7 @@ struct MakeConversationApp: App {
         container.apply(SettingAssembly.self)
         container.apply(WalkthroughAssembly.self)
         container.apply(VerificationAssembly.self)
+        container.apply(VerificationOTPAssembly.self)
 
         return container
     }()

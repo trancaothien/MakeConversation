@@ -11,7 +11,6 @@ import SwiftUI
 struct VerificationView: View {
            
     @StateObject var viewState: VerificationViewState
-    @State var phoneNumber: String = ""
     
     var body: some View {
         VStack {
@@ -25,24 +24,22 @@ struct VerificationView: View {
                 .padding(.bottom, 10)
             
             HStack {
-                Section {
-                    Image(.flagCover)
-                    Text("+62")
+                HStack {
+                    Image(.vietnamFlagIcon)
+                    Text("+84")
                 }
                 .background(Color(.systemGray6))
                 .cornerRadius(4)
                 
-                TextField("verification.textfield", text: $phoneNumber)
-                    .keyboardType(.numberPad)
-                    .foregroundColor(.black)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(4)
+                TextField("verification.textfield", text: self.$viewState.phoneNumber)
+                    .textFieldStyle(CustomTextFieldStyle(width: 245, heiht: 36, keyboadType: .numberPad))
+
             }
             .padding(.top, 12)
             
             Button("verification.button.continue") {
                 self.viewState.continueButtonDidTap()
-                print("Debug: Clicked on Continue Title")
+                print("Debug: Clicked on Continue Button")
             }
                 .buttonStyle(FilledButtonStyle(width: .infinity))
                 .padding(.top, 12)

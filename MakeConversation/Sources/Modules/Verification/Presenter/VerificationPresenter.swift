@@ -23,7 +23,6 @@ final class VerificationPresenter: VerificationPresenterProtocol {
     }
     
     
-    
 }
 
 // MARK: For Router
@@ -35,5 +34,6 @@ extension VerificationPresenter {
     
     func continueButtonDidTap() {
         // TODO: Handle when tap on the Continue button
+        self.router.continueButtonDidTap()
     }
 }

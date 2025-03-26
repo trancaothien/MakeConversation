@@ -12,6 +12,7 @@ import SwiftUI
 // Router
 protocol VerificationRouterProtocol: RouterProtocol {
     func backToPreviousScreen()
+    func continueButtonDidTap()
 }
 
 // Presenter

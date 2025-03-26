@@ -1,13 +1,19 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "+62" : {
+    "" : {
+
+    },
+    "+84" : {
 
     },
     "Chats" : {
 
     },
     "Danh sách Chat" : {
+
+    },
+    "Enter Code" : {
 
     },
     "Hello iOS / contact view" : {
@@ -146,6 +152,9 @@
           }
         }
       }
+    },
+    "We have sent you an SMS with the code to ..." : {
+
     },
     "Yes" : {
 

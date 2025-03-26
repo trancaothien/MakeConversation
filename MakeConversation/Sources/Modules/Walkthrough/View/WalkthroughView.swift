@@ -33,7 +33,7 @@ struct WalkthroughView: View {
                 self.viewState.startMessagingDidTap()
                 print("Debug: Clicked on Start Title")
             }
-                .buttonStyle(FilledButtonStyle(width: .infinity))
+            .buttonStyle(FilledButtonStyle(width: .infinity))
         }
         .padding(.horizontal, 24)
     }
