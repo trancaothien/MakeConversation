@@ -12,12 +12,13 @@ import SwiftUI
 // Router
 protocol VerificationRouterProtocol: RouterProtocol {
     func backToPreviousScreen()
-    func continueButtonDidTap()
+    func continueButtonDidTap(_ phoneNumber: String)
 }
 
 // Presenter
 protocol VerificationPresenterProtocol: PresenterProtocol {
-    func continueButtonDidTap()
+    func continueButtonDidTap(_ phoneNumber: String)
+    func backButtonDidTap()
 }
 
 // Interactor

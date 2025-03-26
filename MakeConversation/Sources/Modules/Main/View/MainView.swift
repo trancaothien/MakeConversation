@@ -13,8 +13,7 @@ struct MainView: View {
     @StateObject var viewState: MainViewState
     
     var body: some View {
-        //        Text("Main Screen")
-
+        
             VStack {
                 Text("Danh sách Chat") // Placeholder for chat list
                 Spacer()

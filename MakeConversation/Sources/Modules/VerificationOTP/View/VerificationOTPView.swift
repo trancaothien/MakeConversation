@@ -11,39 +11,47 @@ import SwiftUI
 struct VerificationOTPView: View {
            
     @StateObject var viewState: VerificationOTPViewState
+    @State var phoneNumber: String
+    
     var body: some View {
         VStack {
-            Text("Enter Code")
-                .useCustomStyle(size: FontSize.size24, color: .text, weight: .semibold)
-                .padding()
-            Text("We have sent you an SMS with the code to ...")
-                .useCustomStyle(size: FontSize.size14, color: .text, weight: .regular)
-                .multilineTextAlignment(.center)
-                .padding()
             
-            HStack {
-                ForEach(0..<4) {index in
-                    TextField("", text: $viewState.otp[index])
-                        .frame(width: 50, height: 50)
-                        .keyboardType(.numberPad)
-                        .background(RoundedRectangle(cornerRadius: 10)
-                        .fill(Color(.systemGray6))
-                        .shadow(color: .gray.opacity(0.3), radius: 3, x: 0, y: 2)
-                        )
-                        .onChange(of: viewState.otp[index]) {
-                           
-                                return
-                           
-                        }
+            Spacer()
+                .frame(height: 170)
+            
+            Text("Enter Code")
+                .applyHeader2Style()
+                .padding(.bottom, 8)
+            
+            Text("We have sent you an SMS with the code to \(phoneNumber)")
+                .applyBody2Style()
+                .multilineTextAlignment(.center)
+                .padding(.bottom, 48)
+            
+            CustomizableOTPView(otp: $viewState.otp, length: viewState.otp.count)
+            
+            Spacer()
+
+            Button("Resend Code") {
+                self.viewState.resendButtonDidTap = true
+            }
+            .buttonStyle(TextButtonStyle(width: .infinity, color: .branch))
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button(action: {
+                    self.viewState.backButtonDidTap = true
+                }) {
+                    Image(.arrowLeadingIcon)
                 }
             }
         }
     }
 }
 
-//struct VerificationOTPPreviews: PreviewProvider {
-//    static var previews: some View {
-//        ApplicationViewBuilder.stub.build(view: .verificationOTP)
-//    }
-//}
+struct VerificationOTPPreviews: PreviewProvider {
+    static var previews: some View {
+        ApplicationViewBuilder.stub.build(view: .verificationOTP("+84 869 294 264"))
+    }
+}
 

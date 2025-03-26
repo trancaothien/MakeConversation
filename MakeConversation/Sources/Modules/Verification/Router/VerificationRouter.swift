@@ -17,10 +17,10 @@ final class VerificationRouter: VerificationRouterProtocol {
     }
     
     func backToPreviousScreen() {
-        self.navigation.push(.walkthrough)
+        self.navigation.pop()
     }
     
-    func continueButtonDidTap() {
-        self.navigation.push(.verificationOTP)
+    func continueButtonDidTap(_ phoneNumber: String) {
+        self.navigation.push(.verificationOTP(phoneNumber))
     }
 }

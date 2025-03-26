@@ -10,39 +10,63 @@ import SwiftUI
 
 struct VerificationView: View {
            
-    @StateObject var viewState: VerificationViewState
+    @ObservedObject var viewState: VerificationViewState
     
     var body: some View {
         VStack {
+            
+            Spacer()
+                .frame(height: 170)
+            
             Text("verification.title")
-                .useCustomStyle(size: FontSize.size24, color: .text, weight: .bold)
-                .padding(.bottom, 5)
+                .applyHeader2Style()
+                .padding(.bottom, 8)
             
             Text("verification.content")
-                .useCustomStyle(size: FontSize.size14, color: .text, weight: .light)
+                .applyBody2Style()
                 .multilineTextAlignment(.center)
-                .padding(.bottom, 10)
+                .padding(.bottom, 48)
             
             HStack {
-                HStack {
+                HStack(spacing: 8) {
                     Image(.vietnamFlagIcon)
-                    Text("+84")
+                    Text("\(self.viewState.countryCode)")
+                        .applyBody1Style(color: .disable)
+                        .foregroundColor(.black)
                 }
-                .background(Color(.systemGray6))
+                .padding(.horizontal, 8)
+                .frame(height: 36)
+                .background(.neutral)
                 .cornerRadius(4)
-                
-                TextField("verification.textfield", text: self.$viewState.phoneNumber)
-                    .textFieldStyle(CustomTextFieldStyle(width: 245, heiht: 36, keyboadType: .numberPad))
 
+                TextField("verification.textfield.phone", text: self.$viewState.phoneNumber)
+                    .textFieldStyle(CustomTextFieldStyle(keyboadType: .numberPad))
+                    .frame(height: 36)
+                    .frame(maxWidth: .infinity)
+                    .background(.neutral)
             }
-            .padding(.top, 12)
+            
+            Spacer()
             
             Button("verification.button.continue") {
-                self.viewState.continueButtonDidTap()
-                print("Debug: Clicked on Continue Button")
+                // TODO: Handle when user taped on continue button
+                self.viewState.continueButtonDidTap = true
             }
-                .buttonStyle(FilledButtonStyle(width: .infinity))
-                .padding(.top, 12)
+            .buttonStyle(FilledButtonStyle(width: .infinity, active: viewState.enableContinueButton))
+            .disabled(!viewState.enableContinueButton)
+            .padding()
+            
+        }
+        .padding(.horizontal, 24)
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button(action: {
+                    // Pop to previous screen
+                    self.viewState.backButtonDidTap = true
+                }) {
+                    Image(.arrowLeadingIcon)
+                }
+            }
         }
     }
 }

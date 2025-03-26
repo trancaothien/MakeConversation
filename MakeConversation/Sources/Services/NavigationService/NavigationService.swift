@@ -82,7 +82,7 @@ enum Views: Identifiable, Equatable, Hashable {
     case setting
     case walkthrough
     case verification
-    case verificationOTP
+    case verificationOTP(String)
     
     var stringKey: String {
         switch self {

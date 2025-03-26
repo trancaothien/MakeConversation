@@ -11,12 +11,16 @@ import SwiftUI
 
 // Router
 protocol VerificationOTPRouterProtocol: RouterProtocol {
-    func backToPreviousScreen()
+    func back()
+    func goHome()
+    func goRegister()
 }
 
 // Presenter
 protocol VerificationOTPPresenterProtocol: PresenterProtocol {
-//    func continueButtonDidTap()
+    func backButtonDidTap()
+    func resendButtonDidTap()
+    func codeVerifyDidSend()
 }
 
 // Interactor
