@@ -11,33 +11,47 @@ import SwiftUI
 struct VerificationOTPView: View {
            
     @StateObject var viewState: VerificationOTPViewState
+    @State var phoneNumber: String
     
     var body: some View {
         VStack {
+            
+            Spacer()
+                .frame(height: 170)
+            
             Text("Enter Code")
-                .useCustomStyle(size: FontSize.size24, color: .text, weight: .semibold)
-                .padding()
-            Text("We have sent you an SMS with the code to ...")
-                .useCustomStyle(size: FontSize.size14, color: .text, weight: .regular)
+                .applyHeader2Style()
+                .padding(.bottom, 8)
+            
+            Text("We have sent you an SMS with the code to \(phoneNumber)")
+                .applyBody2Style()
                 .multilineTextAlignment(.center)
-                .padding()
+                .padding(.bottom, 48)
             
-            CustomizableOTPView(length: 4, borderColor: .gray, focusColor: .blue)
-                .padding()
+            CustomizableOTPView(otp: $viewState.otp, length: viewState.otp.count)
             
+            Spacer()
+
             Button("Resend Code") {
-                
-                print("Debug: Clicked on Resend Code button")
+                self.viewState.resendButtonDidTap = true
             }
-            .buttonStyle(TextButtonStyle(width: .infinity))
-            .foregroundColor(.blue)
+            .buttonStyle(TextButtonStyle(width: .infinity, color: .branch))
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button(action: {
+                    self.viewState.backButtonDidTap = true
+                }) {
+                    Image(.arrowLeadingIcon)
+                }
+            }
         }
     }
 }
 
 struct VerificationOTPPreviews: PreviewProvider {
     static var previews: some View {
-        ApplicationViewBuilder.stub.build(view: .verificationOTP)
+        ApplicationViewBuilder.stub.build(view: .verificationOTP("+84 869 294 264"))
     }
 }
 

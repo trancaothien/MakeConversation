@@ -4,7 +4,7 @@
     "" : {
 
     },
-    "+84" : {
+    "%@" : {
 
     },
     "Chats" : {
@@ -26,9 +26,6 @@
 
     },
     "No" : {
-
-    },
-    "Phone Number" : {
 
     },
     "Resend Code" : {
@@ -74,7 +71,7 @@
         }
       }
     },
-    "verification.textfield" : {
+    "verification.textfield.phone" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -125,7 +122,7 @@
         }
       }
     },
-    "walkthrough.term.title" : {
+    "walkthrough.button.term" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -159,7 +156,7 @@
         }
       }
     },
-    "We have sent you an SMS with the code to ..." : {
+    "We have sent you an SMS with the code to %@" : {
 
     },
     "Yes" : {

@@ -14,44 +14,60 @@ struct VerificationView: View {
     
     var body: some View {
         VStack {
-            VStack {
-                Text("verification.title")
-                    .useCustomStyle(size: FontSize.size24, color: .text, weight: .bold)
-                    .padding(.bottom, 10)
-                
-                Text("verification.content")
-                    .useCustomStyle(size: FontSize.size14, color: .text, weight: .light)
-                    .multilineTextAlignment(.center)
-                    .padding(.bottom, 20)
-            }
             
-            HStack(spacing: 12) {
-                HStack {
+            Spacer()
+                .frame(height: 170)
+            
+            Text("verification.title")
+                .applyHeader2Style()
+                .padding(.bottom, 8)
+            
+            Text("verification.content")
+                .applyBody2Style()
+                .multilineTextAlignment(.center)
+                .padding(.bottom, 48)
+            
+            HStack {
+                HStack(spacing: 8) {
                     Image(.vietnamFlagIcon)
-                    Text("+84")
-                        .useCustomStyle(size: FontSize.size14, color: .text, weight: .bold)
+                    Text("\(self.viewState.countryCode)")
+                        .applyBody1Style(color: .disable)
                         .foregroundColor(.black)
                 }
+                .padding(.horizontal, 8)
                 .frame(height: 36)
-                .padding(.horizontal)
-                .background(Color(.textfieldBackground))
+                .background(.neutral)
                 .cornerRadius(4)
 
-                TextField("Phone Number", text: self.$viewState.phoneNumber)
-                    .textFieldStyle(CustomTextFieldStyle(width: 245, heiht: 36, keyboadType: .numberPad))
+                TextField("verification.textfield.phone", text: self.$viewState.phoneNumber)
+                    .textFieldStyle(CustomTextFieldStyle(keyboadType: .numberPad))
                     .frame(height: 36)
-                    .background(Color(.textfieldBackground))
+                    .frame(maxWidth: .infinity)
+                    .background(.neutral)
             }
-            .padding(.top, 15)
+            
+            Spacer()
+            
             Button("verification.button.continue") {
-                self.viewState.continueButtonDidTap()
-                print("Debug: Clicked on Continue Button")
+                // TODO: Handle when user taped on continue button
+                self.viewState.continueButtonDidTap = true
             }
-                .buttonStyle(FilledButtonStyle(width: .infinity))
-                .padding(.bottom, 20)
-                .padding()
+            .buttonStyle(FilledButtonStyle(width: .infinity, active: viewState.enableContinueButton))
+            .disabled(!viewState.enableContinueButton)
+            .padding()
+            
         }
-//        .padding(.top, 30)
+        .padding(.horizontal, 24)
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button(action: {
+                    // Pop to previous screen
+                    self.viewState.backButtonDidTap = true
+                }) {
+                    Image(.arrowLeadingIcon)
+                }
+            }
+        }
     }
 }
 

@@ -11,7 +11,7 @@ import SwiftUI
 
 final class VerificationOTPAssembly: Assembly {
     
-    func build() -> some View {
+    func build(_ phoneNumber: String) -> some View {
         
         let navigation = container.resolve(NavigationAssembly.self).build()
 
@@ -31,7 +31,7 @@ final class VerificationOTPAssembly: Assembly {
         viewState.set(with: presenter)
         
         // View
-        let view = VerificationOTPView(viewState: viewState)
+        let view = VerificationOTPView(viewState: viewState, phoneNumber: phoneNumber)
         return view
     }
 }

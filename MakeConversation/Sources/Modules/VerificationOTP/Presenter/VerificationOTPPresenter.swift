@@ -21,16 +21,20 @@ final class VerificationOTPPresenter: VerificationOTPPresenterProtocol {
         self.interactor = interactor
         self.viewState = viewState
     }
-    
-    
-    
 }
 
-// MARK: For Router
+// MARK: Function
 extension VerificationOTPPresenter {
-    
     func backButtonDidTap() {
-        self.router.backToPreviousScreen()
+        self.router.back()
     }
-
+    
+    func resendButtonDidTap() {
+        // TODO: Call to interactor to process to resend OTP
+    }
+    
+    func codeVerifyDidSend() {
+        // TODO: Handle to call api / firebase to verify otp code
+        self.router.goRegister()
+    }
 }

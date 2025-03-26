@@ -32,8 +32,8 @@ extension VerificationPresenter {
         self.router.backToPreviousScreen()
     }
     
-    func continueButtonDidTap() {
+    func continueButtonDidTap(_ phoneNumber: String) {
         // TODO: Handle when tap on the Continue button
-        self.router.continueButtonDidTap()
+        self.router.continueButtonDidTap(phoneNumber)
     }
 }

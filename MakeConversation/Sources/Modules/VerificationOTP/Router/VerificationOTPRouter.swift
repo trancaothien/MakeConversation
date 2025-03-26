@@ -15,8 +15,18 @@ final class VerificationOTPRouter: VerificationOTPRouterProtocol {
     init(navigation: any NavigationServiceType){
         self.navigation = navigation
     }
+}
+
+extension VerificationOTPRouter {
+    func back() {
+        self.navigation.pop()
+    }
     
-    func backToPreviousScreen() {
-        self.navigation.push(.verification)
+    func goHome() {
+        self.navigation.push(.main)
+    }
+    
+    func goRegister() {
+        // TODO: Navigate to register screen
     }
 }
