@@ -27,6 +27,8 @@ struct MakeConversationApp: App {
         container.apply(ContactAssembly.self)
         container.apply(ConversationAssembly.self)
         container.apply(SettingAssembly.self)
+        container.apply(WalkthroughAssembly.self)
+        container.apply(VerificationAssembly.self)
 
         return container
     }()

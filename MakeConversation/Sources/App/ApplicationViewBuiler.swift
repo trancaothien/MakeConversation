@@ -26,6 +26,10 @@ final class ApplicationViewBuilder : Assembly, ObservableObject {
             buildConversation()
         case .setting:
             buildSetting()
+        case .walkthrough:
+            buildWalkthrough()
+        case .verification:
+            buildVerification()
         }
     }
     
@@ -52,6 +56,16 @@ final class ApplicationViewBuilder : Assembly, ObservableObject {
     @ViewBuilder
     fileprivate func buildSetting() -> some View {
         container.resolve(SettingAssembly.self).build()
+    }
+    
+    @ViewBuilder
+    fileprivate func buildWalkthrough() -> some View {
+        container.resolve(WalkthroughAssembly.self).build()
+    }
+    
+    @ViewBuilder
+    fileprivate func buildVerification() -> some View {
+        container.resolve(VerificationAssembly.self).build()
     }
     
 }
