@@ -10,40 +10,48 @@ import SwiftUI
 
 struct VerificationView: View {
            
-    @StateObject var viewState: VerificationViewState
+    @ObservedObject var viewState: VerificationViewState
     
     var body: some View {
         VStack {
-            Text("verification.title")
-                .useCustomStyle(size: FontSize.size24, color: .text, weight: .bold)
-                .padding(.bottom, 5)
+            VStack {
+                Text("verification.title")
+                    .useCustomStyle(size: FontSize.size24, color: .text, weight: .bold)
+                    .padding(.bottom, 10)
+                
+                Text("verification.content")
+                    .useCustomStyle(size: FontSize.size14, color: .text, weight: .light)
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom, 20)
+            }
             
-            Text("verification.content")
-                .useCustomStyle(size: FontSize.size14, color: .text, weight: .light)
-                .multilineTextAlignment(.center)
-                .padding(.bottom, 10)
-            
-            HStack {
+            HStack(spacing: 12) {
                 HStack {
                     Image(.vietnamFlagIcon)
                     Text("+84")
+                        .useCustomStyle(size: FontSize.size14, color: .text, weight: .bold)
+                        .foregroundColor(.black)
                 }
-                .background(Color(.systemGray6))
+                .frame(height: 36)
+                .padding(.horizontal)
+                .background(Color(.textfieldBackground))
                 .cornerRadius(4)
-                
-                TextField("verification.textfield", text: self.$viewState.phoneNumber)
-                    .textFieldStyle(CustomTextFieldStyle(width: 245, heiht: 36, keyboadType: .numberPad))
 
+                TextField("Phone Number", text: self.$viewState.phoneNumber)
+                    .textFieldStyle(CustomTextFieldStyle(width: 245, heiht: 36, keyboadType: .numberPad))
+                    .frame(height: 36)
+                    .background(Color(.textfieldBackground))
             }
-            .padding(.top, 12)
-            
+            .padding(.top, 15)
             Button("verification.button.continue") {
                 self.viewState.continueButtonDidTap()
                 print("Debug: Clicked on Continue Button")
             }
                 .buttonStyle(FilledButtonStyle(width: .infinity))
-                .padding(.top, 12)
+                .padding(.bottom, 20)
+                .padding()
         }
+//        .padding(.top, 30)
     }
 }
 

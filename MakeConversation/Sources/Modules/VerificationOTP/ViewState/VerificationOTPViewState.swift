@@ -11,7 +11,8 @@ import SwiftUI
 final class VerificationOTPViewState: ObservableObject, VerificationOTPViewStateProtocol {
     private let id = UUID()
     private var presenter: VerificationOTPPresenterProtocol?
-    var otp: [String] = ["", "", "", ""]
+
+    
     func set(with presener: VerificationOTPPresenterProtocol) {
         self.presenter = presener
     }

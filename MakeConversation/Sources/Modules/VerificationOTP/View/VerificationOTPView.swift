@@ -11,6 +11,7 @@ import SwiftUI
 struct VerificationOTPView: View {
            
     @StateObject var viewState: VerificationOTPViewState
+    
     var body: some View {
         VStack {
             Text("Enter Code")
@@ -21,29 +22,22 @@ struct VerificationOTPView: View {
                 .multilineTextAlignment(.center)
                 .padding()
             
-            HStack {
-                ForEach(0..<4) {index in
-                    TextField("", text: $viewState.otp[index])
-                        .frame(width: 50, height: 50)
-                        .keyboardType(.numberPad)
-                        .background(RoundedRectangle(cornerRadius: 10)
-                        .fill(Color(.systemGray6))
-                        .shadow(color: .gray.opacity(0.3), radius: 3, x: 0, y: 2)
-                        )
-                        .onChange(of: viewState.otp[index]) {
-                           
-                                return
-                           
-                        }
-                }
+            CustomizableOTPView(length: 4, borderColor: .gray, focusColor: .blue)
+                .padding()
+            
+            Button("Resend Code") {
+                
+                print("Debug: Clicked on Term Title")
             }
+            .buttonStyle(TextButtonStyle(width: .infinity))
+            .foregroundColor(.blue)
         }
     }
 }
 
-//struct VerificationOTPPreviews: PreviewProvider {
-//    static var previews: some View {
-//        ApplicationViewBuilder.stub.build(view: .verificationOTP)
-//    }
-//}
+struct VerificationOTPPreviews: PreviewProvider {
+    static var previews: some View {
+        ApplicationViewBuilder.stub.build(view: .verificationOTP)
+    }
+}
 

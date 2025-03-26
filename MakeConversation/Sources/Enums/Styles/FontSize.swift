@@ -19,7 +19,7 @@ enum FontSize: FontSizeProtocol {
     case size21
     case size24
     case size28
-    case size31
+    case size32
     case size36
     case fized(size: CGFloat)
     
@@ -45,8 +45,8 @@ enum FontSize: FontSizeProtocol {
             return 24
         case .size28:
             return 28
-        case .size31:
-            return 31
+        case .size32:
+            return 32
         case .size36:
             return 36
         case .fized(let size):
