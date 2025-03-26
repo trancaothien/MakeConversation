@@ -1,13 +1,19 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Back" : {
+    "" : {
+
+    },
+    "+84" : {
 
     },
     "Chats" : {
 
     },
     "Danh sách Chat" : {
+
+    },
+    "Enter Code" : {
 
     },
     "Hello iOS / contact view" : {
@@ -27,6 +33,74 @@
     },
     "Title" : {
 
+    },
+    "verification.button.continue" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếp tục"
+          }
+        }
+      }
+    },
+    "verification.content" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please confirm your country code and enter your phone number"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy xác nhận mã quốc gia và nhập số điện thoại của bạn"
+          }
+        }
+      }
+    },
+    "verification.textfield" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phone Number"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Số điện thoại"
+          }
+        }
+      }
+    },
+    "verification.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter Your Phone Number"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhập số điện thoại của bạn"
+          }
+        }
+      }
     },
     "walkthrough.button.start" : {
       "extractionState" : "manual",
@@ -78,6 +152,9 @@
           }
         }
       }
+    },
+    "We have sent you an SMS with the code to ..." : {
+
     },
     "Yes" : {
 

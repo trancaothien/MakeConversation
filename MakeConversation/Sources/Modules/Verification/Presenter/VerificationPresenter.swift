@@ -22,8 +22,18 @@ final class VerificationPresenter: VerificationPresenterProtocol {
         self.viewState = viewState
     }
     
+    
+}
+
+// MARK: For Router
+extension VerificationPresenter {
+    
     func backButtonDidTap() {
         self.router.backToPreviousScreen()
     }
     
+    func continueButtonDidTap() {
+        // TODO: Handle when tap on the Continue button
+        self.router.continueButtonDidTap()
+    }
 }

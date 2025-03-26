@@ -25,11 +25,13 @@ struct WalkthroughView: View {
             
             Button("walkthrough.term.title") {
                 self.viewState.privacyAndServiceDidTap()
+                print("Debug: Clicked on Term Title")
             }
             .buttonStyle(TextButtonStyle(width: .infinity))
         
             Button("walkthrough.button.start") {
                 self.viewState.startMessagingDidTap()
+                print("Debug: Clicked on Start Title")
             }
             .buttonStyle(FilledButtonStyle(width: .infinity))
         }

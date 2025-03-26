@@ -11,7 +11,7 @@ import Foundation
 /// The `NavigationServiceType` protocol defines a navigation service in the application,
 /// providing management of the view stack, modal windows, popups, and alerts.
 protocol NavigationServiceType: ObservableObject, Identifiable {
-    
+
     /// An array of views that make up the current navigation stack.
     /// Used for managing transitions between screens.
     /// By default, this array is empty, and the root page is bound to the NavigationStack body in the RootView body.

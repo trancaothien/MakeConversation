@@ -45,6 +45,7 @@ struct FilledButtonStyle: ButtonStyle {
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
+            .font(Font.mulish(size: FontSize.size16, weight: .semibold))
             .frame(maxWidth: width)
             .padding()
             .background(fillColor)

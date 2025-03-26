@@ -21,6 +21,7 @@ final class WalkthroughRouter: WalkthroughRouterProtocol {
     
     func navigateToTermAndService() {
         //TODO: Navigate to term and service view
+        
     }
        
 }
