@@ -32,8 +32,5 @@ extension VerificationOTPPresenter {
     func backButtonDidTap() {
         self.router.backToPreviousScreen()
     }
-//    
-//    func continueButtonDidTap() {
-//        // TODO: Handle when tap on the Continue button
-//    }
+
 }

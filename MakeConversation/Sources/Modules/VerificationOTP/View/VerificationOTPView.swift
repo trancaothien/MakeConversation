@@ -27,7 +27,7 @@ struct VerificationOTPView: View {
             
             Button("Resend Code") {
                 
-                print("Debug: Clicked on Term Title")
+                print("Debug: Clicked on Resend Code button")
             }
             .buttonStyle(TextButtonStyle(width: .infinity))
             .foregroundColor(.blue)

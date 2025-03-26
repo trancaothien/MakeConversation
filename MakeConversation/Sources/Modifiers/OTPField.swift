@@ -85,7 +85,6 @@ struct CustomizableOTPView: View {
                             .useCustomStyle(size: FontSize.size32, color: .text, weight: .semibold)
                     } else {
                         Circle()
-//                            .fill(Color.gray.opacity(0.3))
                             .fill(Color(uiColor: .otpCircle))
                             .frame(width: size * 0.4, height: size * 0.4)
                             
@@ -93,7 +92,7 @@ struct CustomizableOTPView: View {
                 }
                 .frame(width: size, height: size)
                 .background(Color.white)
-                .clipShape(Circle()) // Keep the circle
+                .clipShape(Circle())
                 .focused($focusedIndex, equals: index)
                                .onTapGesture {
                                    focusedIndex = index
@@ -115,7 +114,6 @@ struct CustomizableOTPView: View {
                             }
                         }
                 )
-//                .padding()
             }
         }
         

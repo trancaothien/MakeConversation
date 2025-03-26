@@ -51,6 +51,6 @@ struct FilledButtonStyle: ButtonStyle {
             .background(fillColor)
             .foregroundColor(.white)
             .cornerRadius(30)
-            .opacity(configuration.isPressed ? 0.7 : 1.0) // Press effect
+            .opacity(configuration.isPressed ? 0.7 : 1.0)
     }
 }

@@ -23,12 +23,5 @@ final class VerificationOTPViewState: ObservableObject, VerificationOTPViewState
 // MARK: Function
 extension VerificationOTPViewState {
     
-//    func backButtonDidTap() {
-//        self.presenter?.continueButtonDidTap()
-//    }
-//    
-//    func continueButtonDidTap() {
-//        // TODO: Handle when tap on the Continue button
-//        self.presenter?.continueButtonDidTap()
-//    }
+
 }

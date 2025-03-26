@@ -16,7 +16,7 @@ protocol VerificationOTPRouterProtocol: RouterProtocol {
 
 // Presenter
 protocol VerificationOTPPresenterProtocol: PresenterProtocol {
-//    func continueButtonDidTap()
+    
 }
 
 // Interactor
