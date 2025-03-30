@@ -2,13 +2,13 @@
 //  VerificationOTPRouter.swift
 //  MakeConversation
 //
-//  Created by Tran Cao Thang on 26/3/25
+//  Created by Tran Cao Thang on 27/3/25
 //
 //
 
 import Foundation
 
-final class VerificationOTPRouter: VerificationOTPRouterProtocol {
+final class VerificationProfileRouter: VerificationProfileRouterProtocol {
     
     private var navigation: any NavigationServiceType
     
@@ -17,17 +17,16 @@ final class VerificationOTPRouter: VerificationOTPRouterProtocol {
     }
 }
 
-extension VerificationOTPRouter {
+extension VerificationProfileRouter {
     func back() {
         self.navigation.pop()
     }
     
     func goHome() {
-        self.navigation.push(.main)
+        self.navigation.pushReplace(.main)
     }
     
     func goRegister() {
         // TODO: Navigate to register screen
-        self.navigation.push(.verificationProfile)
     }
 }

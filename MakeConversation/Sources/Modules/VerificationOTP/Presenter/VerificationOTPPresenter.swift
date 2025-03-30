@@ -31,10 +31,11 @@ extension VerificationOTPPresenter {
     
     func resendButtonDidTap() {
         // TODO: Call to interactor to process to resend OTP
+        self.router.goRegister()
     }
     
     func codeVerifyDidSend() {
         // TODO: Handle to call api / firebase to verify otp code
-        self.router.goRegister()
     }
+    
 }

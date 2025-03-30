@@ -45,6 +45,9 @@ struct VerificationView: View {
                     .frame(maxWidth: .infinity)
                     .background(.neutral)
             }
+            .onAppear() {
+                print("Debug: Value of phoneNumber = \(viewState.phoneNumber)")
+            }
             
             Spacer()
             

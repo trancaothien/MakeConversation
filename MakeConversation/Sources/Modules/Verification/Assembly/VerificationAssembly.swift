@@ -31,6 +31,7 @@ final class VerificationAssembly: Assembly {
         
         // View
         let view = VerificationView(viewState: viewState)
+        
         return view
     }
 }

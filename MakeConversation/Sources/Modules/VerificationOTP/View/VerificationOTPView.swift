@@ -34,6 +34,7 @@ struct VerificationOTPView: View {
 
             Button("Resend Code") {
                 self.viewState.resendButtonDidTap = true
+                print("Clicked on Resend Code Button")
             }
             .buttonStyle(TextButtonStyle(width: .infinity, color: .branch))
         }

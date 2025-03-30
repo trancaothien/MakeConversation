@@ -21,6 +21,7 @@ protocol VerificationOTPPresenterProtocol: PresenterProtocol {
     func backButtonDidTap()
     func resendButtonDidTap()
     func codeVerifyDidSend()
+    
 }
 
 // Interactor

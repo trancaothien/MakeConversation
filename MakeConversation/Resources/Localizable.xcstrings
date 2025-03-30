@@ -4,16 +4,28 @@
     "" : {
 
     },
+    "?" : {
+
+    },
     "%@" : {
+
+    },
+    "%lld" : {
+
+    },
+    "Cant load last message content" : {
+
+    },
+    "Change background Color" : {
 
     },
     "Chats" : {
 
     },
-    "Danh sách Chat" : {
+    "Enter Code" : {
 
     },
-    "Enter Code" : {
+    "First Name (Required)" : {
 
     },
     "Hello iOS / contact view" : {
@@ -25,16 +37,28 @@
     "Hello iOS / SettingView" : {
 
     },
+    "Last Name (Optional)" : {
+
+    },
     "No" : {
 
     },
+    "Placeholder" : {
+
+    },
     "Resend Code" : {
+
+    },
+    "Show sheet" : {
 
     },
     "Splash Screen" : {
 
     },
     "Title" : {
+
+    },
+    "Turn off Sheet" : {
 
     },
     "verification.button.continue" : {
@@ -160,6 +184,9 @@
 
     },
     "Yes" : {
+
+    },
+    "Your Profile" : {
 
     }
   },

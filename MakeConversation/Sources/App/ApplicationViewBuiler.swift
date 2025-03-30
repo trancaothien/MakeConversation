@@ -30,8 +30,11 @@ final class ApplicationViewBuilder : Assembly, ObservableObject {
             buildWalkthrough()
         case .verification: // ✅ Ensure it matches the enum
             buildVerification()
+                
         case .verificationOTP(let phoneNumber):
             buildVerificationOTP(phoneNumber)
+        case .verificationProfile:
+            buildVerificationProfile()
         }
     }
     
@@ -73,6 +76,11 @@ final class ApplicationViewBuilder : Assembly, ObservableObject {
     @ViewBuilder
     fileprivate func buildVerificationOTP(_ phoneNumber: String) -> some View {
         container.resolve(VerificationOTPAssembly.self).build(phoneNumber)
+    }
+    
+    @ViewBuilder
+    fileprivate func buildVerificationProfile() -> some View {
+        container.resolve(VerificationProfileAssembly.self).build()
     }
     
 }

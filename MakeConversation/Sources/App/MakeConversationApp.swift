@@ -10,6 +10,9 @@ import SwiftData
 
 @main
 struct MakeConversationApp: App {
+    
+    @Environment(\.scenePhase) var scenePhase
+    
     @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @ObservedObject var appViewBuilder: ApplicationViewBuilder
     @ObservedObject var navigationService: NavigationService
@@ -30,6 +33,7 @@ struct MakeConversationApp: App {
         container.apply(WalkthroughAssembly.self)
         container.apply(VerificationAssembly.self)
         container.apply(VerificationOTPAssembly.self)
+        container.apply(VerificationProfileAssembly.self)
 
         return container
     }()
@@ -44,5 +48,17 @@ struct MakeConversationApp: App {
         WindowGroup {
             MakeConversationView(navigationService: navigationService, appViewBuilder: appViewBuilder)
         }
+        .onChange(of: scenePhase, perform: { phase in
+            switch phase {
+            case .active:
+                print("Active")
+            case .background:
+                print("Background")
+            case .inactive:
+                print("Inactive")
+            default:
+                print("Something...")
+            }
+        })
     }
 }

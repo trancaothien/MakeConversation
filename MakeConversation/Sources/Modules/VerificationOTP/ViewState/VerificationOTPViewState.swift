@@ -13,6 +13,7 @@ final class VerificationOTPViewState: ObservableObject, VerificationOTPViewState
     private let id = UUID()
     private var presenter: VerificationOTPPresenterProtocol?
     private var cancellables = Set<AnyCancellable>()
+    
 
     // MARK: State
     @Published var backButtonDidTap: Bool = false
@@ -25,8 +26,9 @@ final class VerificationOTPViewState: ObservableObject, VerificationOTPViewState
     
     init() {
         observeBackButtonTap()
-        observeContinueButtonTap()
+        observeResendButtonTap()
         observeOtpDidChange()
+        
     }
 }
 
@@ -40,9 +42,11 @@ extension VerificationOTPViewState {
         .store(in: &cancellables)
     }
     
-    private func observeContinueButtonTap() {
+    private func observeResendButtonTap() {
         $resendButtonDidTap.sink(receiveValue: { value in
-            if value { self.presenter?.resendButtonDidTap() }
+            if value {
+                self.presenter?.resendButtonDidTap()
+            }
         })
         .store(in: &cancellables)
     }
@@ -53,4 +57,6 @@ extension VerificationOTPViewState {
         })
         .store(in: &cancellables)
     }
+    
+    
 }
