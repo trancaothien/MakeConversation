@@ -12,9 +12,6 @@ final class MainViewState: ObservableObject, MainViewStateProtocol {
     private let id = UUID()
     private var presenter: MainPresenterProtocol?
     
-    //State
-    @Published var placeHolderText: String = ""
-    
     func set(with presener: MainPresenterProtocol) {
         self.presenter = presener
     }

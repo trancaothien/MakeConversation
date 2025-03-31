@@ -17,7 +17,7 @@ struct VerificationProfileView: View {
     var body: some View {
         VStack {
             Spacer()
-                .frame(height: 170)
+                .frame(height: 46)
             
             Button(action: {
                 self.isShowingnPhotoPicker = true
@@ -45,22 +45,25 @@ struct VerificationProfileView: View {
                         )
                         .offset(x: 35, y: 35)
                 }
-                .padding()
             }
+            
+            Spacer()
+                .frame(height: 31)
             
             TextField("First Name (Required)", text: self.$viewState.firstName)
                 .textFieldStyle(CustomTextFieldStyle(keyboadType: .default))
                 .frame(height: 36)
                 .frame(maxWidth: .infinity)
                 .background(.neutral)
-                .padding(.horizontal)
+            
+            Spacer()
+                .frame(height: 12)
             
             TextField("Last Name (Optional)", text: self.$viewState.lastName)
                 .textFieldStyle(CustomTextFieldStyle(keyboadType: .default))
                 .frame(height: 36)
                 .frame(maxWidth: .infinity)
                 .background(.neutral)
-                .padding(.horizontal)
             
             Spacer()
             
@@ -70,9 +73,10 @@ struct VerificationProfileView: View {
                 self.viewState.saveButtonDidTap = true
                 
             }
+            .padding(.bottom)
             .buttonStyle(FilledButtonStyle(width: .infinity, active: viewState.saveButtonDidTap))
-            .padding()
         }
+        .padding(.horizontal, 24)
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 HStack {

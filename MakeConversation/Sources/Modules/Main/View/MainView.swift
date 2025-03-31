@@ -11,28 +11,18 @@ import SwiftUI
 struct MainView: View {
     
     @StateObject var viewState: MainViewState
-//    @State var placeHolderText: String = ""
+
+    @State var viewSelection: Int = 0
     
     var body: some View {
         VStack {
-            //search bar
-            TextField("Placeholder", text: $viewState.placeHolderText)
-                .textFieldStyle(CustomTextFieldStyle(keyboadType: .default))
-                .frame(height: 36)
-                .frame(maxWidth: .infinity)
-                .background(.neutral)
-                .padding(.horizontal)
-                .padding(.top, 10)
-                .padding(.bottom, 10)
-                
-            ScrollView {
-
-                ForEach(0..<30, id: \.self) { tempView in
-                    ChatRowView(userAvatar: Image(.avatar), userName: "Cao Thang", lastMessageContent: "Good morning", unReadCount: 4, sentTime: "Today", isOnline: true)
-                        .padding(.horizontal)
-                }
+            switch viewSelection {
+            case 0: ApplicationViewBuilder.stub.build(view: .contact)
+            case 1: ApplicationViewBuilder.stub.build(view: .conversation)
+            case 2: ApplicationViewBuilder.stub.build(view: .setting)
+            default:
+                VStack{}
             }
-            Spacer()
         }
         .toolbar() {
             ToolbarItem(placement: .topBarLeading) {
@@ -61,7 +51,7 @@ struct MainView: View {
             ToolbarItem(placement: .bottomBar) {
                 HStack {
                     Button {
-                        print("Clicked on listFriend Button on Bottom Bar")
+                        viewSelection = 0
                     } label: {
                         Image(.listFriendIcon)
                     }
@@ -69,7 +59,7 @@ struct MainView: View {
                     Spacer()
                     
                     Button {
-                        print("Clicked on Chats Button on Bottom Bar")
+                        viewSelection = 1
                     } label: {
                         Text("Chats")
                             .applySubHeader2Style()
@@ -78,7 +68,7 @@ struct MainView: View {
                     Spacer()
                     
                     Button {
-                        print("Clicked on More Button on Bottom Bar")
+                        viewSelection = 2
                     } label: {
                         Image(.moreIcon)
                     }
