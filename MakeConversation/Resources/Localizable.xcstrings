@@ -1,13 +1,31 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Back" : {
+    "" : {
+
+    },
+    "?" : {
+
+    },
+    "%@" : {
+
+    },
+    "%lld" : {
+
+    },
+    "Cant load last message content" : {
+
+    },
+    "Change background Color" : {
 
     },
     "Chats" : {
 
     },
-    "Danh sách Chat" : {
+    "Enter Code" : {
+
+    },
+    "First Name (Required)" : {
 
     },
     "Hello iOS / contact view" : {
@@ -19,7 +37,19 @@
     "Hello iOS / SettingView" : {
 
     },
+    "Last Name (Optional)" : {
+
+    },
     "No" : {
+
+    },
+    "Placeholder" : {
+
+    },
+    "Resend Code" : {
+
+    },
+    "Show sheet" : {
 
     },
     "Splash Screen" : {
@@ -27,6 +57,77 @@
     },
     "Title" : {
 
+    },
+    "Turn off Sheet" : {
+
+    },
+    "verification.button.continue" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiếp tục"
+          }
+        }
+      }
+    },
+    "verification.content" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please confirm your country code and enter your phone number"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy xác nhận mã quốc gia và nhập số điện thoại của bạn"
+          }
+        }
+      }
+    },
+    "verification.textfield.phone" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phone Number"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Số điện thoại"
+          }
+        }
+      }
+    },
+    "verification.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter Your Phone Number"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nhập số điện thoại của bạn"
+          }
+        }
+      }
     },
     "walkthrough.button.start" : {
       "extractionState" : "manual",
@@ -45,7 +146,7 @@
         }
       }
     },
-    "walkthrough.term.title" : {
+    "walkthrough.button.term" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -79,7 +180,13 @@
         }
       }
     },
+    "We have sent you an SMS with the code to %@" : {
+
+    },
     "Yes" : {
+
+    },
+    "Your Profile" : {
 
     }
   },

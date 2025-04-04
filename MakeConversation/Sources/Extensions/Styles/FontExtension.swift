@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension Font {
-    static func mulish(size: FontSizeProtocol, weight: Font.Weight) -> Font {
-        return Font.custom("Mulish", size: size.value).weight(weight)
+    static func mulish(size: CGFloat, weight: Font.Weight) -> Font {
+        return Font.custom("Mulish", size: size).weight(weight)
     }
 }

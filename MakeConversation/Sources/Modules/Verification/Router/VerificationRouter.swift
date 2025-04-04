@@ -19,4 +19,8 @@ final class VerificationRouter: VerificationRouterProtocol {
     func backToPreviousScreen() {
         self.navigation.pop()
     }
+    
+    func continueButtonDidTap(_ phoneNumber: String) {
+        self.navigation.push(.verificationOTP(phoneNumber))
+    }
 }

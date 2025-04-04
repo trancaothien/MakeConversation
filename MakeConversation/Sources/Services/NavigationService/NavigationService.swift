@@ -82,6 +82,8 @@ enum Views: Identifiable, Equatable, Hashable {
     case setting
     case walkthrough
     case verification
+    case verificationOTP(String)
+    case verificationProfile
     
     var stringKey: String {
         switch self {
@@ -99,6 +101,10 @@ enum Views: Identifiable, Equatable, Hashable {
             return "walkthrough"
         case .verification:
             return "verification"
+        case .verificationOTP:
+            return "verificationOTP"
+        case .verificationProfile:
+            return "verificationProfile"
         }
     }
 }

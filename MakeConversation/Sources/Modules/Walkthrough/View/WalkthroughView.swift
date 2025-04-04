@@ -17,21 +17,24 @@ struct WalkthroughView: View {
             Image(.walkthoughCover)
             
             Text("walkthrough.title")
-                .useCustomStyle(size: FontSize.size24, color: .text, weight: .bold)
+                .applyHeader2Style()
                 .multilineTextAlignment(.center)
                 .padding(.top, 40)
             
             Spacer()
             
-            Button("walkthrough.term.title") {
+            Button("walkthrough.button.term") {
                 self.viewState.privacyAndServiceDidTap()
+                print("Debug: Clicked on Term Title")
             }
             .buttonStyle(TextButtonStyle(width: .infinity))
         
             Button("walkthrough.button.start") {
                 self.viewState.startMessagingDidTap()
+                print("Debug: Clicked on Start Title")
             }
             .buttonStyle(FilledButtonStyle(width: .infinity))
+            .padding()
         }
         .padding(.horizontal, 24)
     }
