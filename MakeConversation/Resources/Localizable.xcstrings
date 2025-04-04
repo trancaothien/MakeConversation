@@ -22,6 +22,9 @@
     "Chats" : {
 
     },
+    "Contacts" : {
+
+    },
     "Enter Code" : {
 
     },
@@ -37,13 +40,16 @@
     "Last Name (Optional)" : {
 
     },
+    "More" : {
+
+    },
     "No" : {
 
     },
-    "Placeholder" : {
+    "Resend Code" : {
 
     },
-    "Resend Code" : {
+    "Search" : {
 
     },
     "Show sheet" : {
