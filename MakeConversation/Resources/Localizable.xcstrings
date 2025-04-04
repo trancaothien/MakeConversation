@@ -22,6 +22,9 @@
     "Chats" : {
 
     },
+    "Contacts" : {
+
+    },
     "Enter Code" : {
 
     },
@@ -31,22 +34,22 @@
     "Hello iOS / contact view" : {
 
     },
-    "Hello iOS / Conversation View" : {
-
-    },
     "Hello iOS / SettingView" : {
 
     },
     "Last Name (Optional)" : {
 
     },
+    "More" : {
+
+    },
     "No" : {
 
     },
-    "Placeholder" : {
+    "Resend Code" : {
 
     },
-    "Resend Code" : {
+    "Search" : {
 
     },
     "Show sheet" : {

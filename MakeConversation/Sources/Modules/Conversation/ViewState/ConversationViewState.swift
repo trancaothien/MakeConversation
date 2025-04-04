@@ -12,6 +12,9 @@ final class ConversationViewState: ObservableObject, ConversationViewStateProtoc
     private let id = UUID()
     private var presenter: ConversationPresenterProtocol?
     
+    //State
+    @Published var placeHolderText: String = ""
+    
     func set(with presener: ConversationPresenterProtocol) {
         self.presenter = presener
     }

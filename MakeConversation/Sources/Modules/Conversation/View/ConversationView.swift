@@ -12,7 +12,19 @@ struct ConversationView: View {
     @StateObject var viewState: ConversationViewState
     
     var body: some View {
-        Text("Hello iOS / Conversation View")
+        VStack {
+                
+            ScrollView {
+                ForEach(0..<30, id: \.self) { tempView in
+                    ChatRowView(userAvatar: Image(.avatar), userName: "Cao Thang", lastMessageContent: "Good morning", unReadCount: 4, sentTime: "Today", isOnline: true)
+                        .padding(.top, 16)
+                }
+            }
+            .searchable(text: $viewState.placeHolderText, prompt: "Search")
+            
+            Spacer()
+        }
+        .padding(.horizontal, 24)
     }
 }
 

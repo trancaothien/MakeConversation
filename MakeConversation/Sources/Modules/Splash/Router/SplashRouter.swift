@@ -18,6 +18,6 @@ final class SplashRouter: SplashRouterProtocol {
 
 extension SplashRouter {
     func navigateToMain() {
-        self.navigation.pushReplace(.walkthrough)
+        self.navigation.pushReplace(.main)
     }
 }

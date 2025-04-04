@@ -11,34 +11,34 @@ import SwiftUI
 struct MainView: View {
     
     @StateObject var viewState: MainViewState
-//    @State var placeHolderText: String = ""
+
+    @State var viewSelection: Int = 1
+    
+    func circleOffset() -> CGFloat {
+        switch viewSelection {
+            case 0: return 43
+            case 1: return 158.5
+            case 2: return 310
+            default: return 0
+        }
+    }
+
     
     var body: some View {
         VStack {
-            //search bar
-            TextField("Placeholder", text: $viewState.placeHolderText)
-                .textFieldStyle(CustomTextFieldStyle(keyboadType: .default))
-                .frame(height: 36)
-                .frame(maxWidth: .infinity)
-                .background(.neutral)
-                .padding(.horizontal)
-                .padding(.top, 10)
-                .padding(.bottom, 10)
-                
-            ScrollView {
-
-                ForEach(0..<30, id: \.self) { tempView in
-                    ChatRowView(userAvatar: Image(.avatar), userName: "Cao Thang", lastMessageContent: "Good morning", unReadCount: 4, sentTime: "Today", isOnline: true)
-                        .padding(.horizontal)
-                }
+            switch viewSelection {
+                case 0: ApplicationViewBuilder.stub.build(view: .contact)
+                case 1: ApplicationViewBuilder.stub.build(view: .conversation)
+                case 2: ApplicationViewBuilder.stub.build(view: .setting)
+                default:
+                    VStack{}
             }
-            Spacer()
         }
         .toolbar() {
             ToolbarItem(placement: .topBarLeading) {
                     Text("Chats")
                     .applyHeader2Style()
-                    .padding()
+                    .padding(.bottom, 29)
             }
 
             ToolbarItem(placement: .topBarTrailing) {
@@ -55,35 +55,66 @@ struct MainView: View {
                         Image(.maskAsReadIcon)
                     }
                 }
-                .padding()
+                .padding(.bottom, 29)
             }
             
             ToolbarItem(placement: .bottomBar) {
-                HStack {
-                    Button {
-                        print("Clicked on listFriend Button on Bottom Bar")
-                    } label: {
-                        Image(.listFriendIcon)
+                    GeometryReader { geometry in
+                        ZStack(alignment: .leading) {
+                            // Indicator
+                            Circle()
+                                .fill(Color.black)
+                                .frame(width: 4, height: 4)
+                                .offset(x: circleOffset(), y: 33)
+                                .animation(.easeInOut(duration: 0.3), value: viewSelection)
+                                .padding(.bottom, 33)
+
+                            // Buttons
+                            HStack {
+                                Button {
+                                    viewSelection = 0
+                                } label: {
+                                    if viewSelection == 0 {
+                                        Text("Contacts").applySubHeader2Style()
+                                    } else {
+                                        Image(.listFriendIcon)
+                                    }
+                                }
+                                .frame(width: 58, height: 44)
+                                .padding(.leading, 16)
+
+                                Spacer()
+
+                                Button {
+                                    viewSelection = 1
+                                } label: {
+                                    if viewSelection == 1 {
+                                        Text("Chats").applySubHeader2Style()
+                                    } else {
+                                        Image(.chatsIcon)
+                                    }
+                                }
+                                .frame(width: 58, height: 44)
+
+                                Spacer()
+
+                                Button {
+                                    viewSelection = 2
+                                } label: {
+                                    if viewSelection == 2 {
+                                        Text("More").applySubHeader2Style()
+                                    } else {
+                                        Image(.moreIcon)
+                                    }
+                                }
+                                .frame(width: 58, height: 44)
+                                .padding(.trailing, 16)
+                            }
+                        }
                     }
-                    
-                    Spacer()
-                    
-                    Button {
-                        print("Clicked on Chats Button on Bottom Bar")
-                    } label: {
-                        Text("Chats")
-                            .applySubHeader2Style()
-                    }
-                    
-                    Spacer()
-                    
-                    Button {
-                        print("Clicked on More Button on Bottom Bar")
-                    } label: {
-                        Image(.moreIcon)
-                    }
+                    .frame(height: 44)
+                    .padding(.horizontal, 24) // padding nếu bạn muốn
                 }
-            }
         }
     }
 }

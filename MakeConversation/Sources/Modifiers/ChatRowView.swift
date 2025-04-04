@@ -86,8 +86,6 @@ struct ChatRowView: View {
                 
             }
         }
-        .padding(.leading, 8)
-        .padding(.trailing, 8)
     }
 }
 
