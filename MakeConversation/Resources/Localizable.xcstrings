@@ -4,25 +4,13 @@
     "" : {
 
     },
-    "?" : {
-
-    },
     "%@" : {
 
     },
     "%lld" : {
 
     },
-    "Cant load last message content" : {
-
-    },
     "Change background Color" : {
-
-    },
-    "Chats" : {
-
-    },
-    "Contacts" : {
 
     },
     "Enter Code" : {
@@ -40,8 +28,56 @@
     "Last Name (Optional)" : {
 
     },
-    "More" : {
-
+    "main.contact.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contacts"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liên hệ"
+          }
+        }
+      }
+    },
+    "main.conversation.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chats"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hội thoại"
+          }
+        }
+      }
+    },
+    "main.setting.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "More"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm"
+          }
+        }
+      }
     },
     "No" : {
 
@@ -49,8 +85,22 @@
     "Resend Code" : {
 
     },
-    "Search" : {
-
+    "search" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tìm kiếm"
+          }
+        }
+      }
     },
     "Show sheet" : {
 
@@ -60,6 +110,23 @@
     },
     "Title" : {
 
+    },
+    "today" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hôm nay"
+          }
+        }
+      }
     },
     "Turn off Sheet" : {
 
@@ -188,6 +255,23 @@
     },
     "Yes" : {
 
+    },
+    "yesterday" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yesterday"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hôm qua"
+          }
+        }
+      }
     },
     "Your Profile" : {
 
