@@ -86,11 +86,19 @@ struct BottomNavigationView<Content: View>: View {
     /// - Unactive
     private func tabView(_ tab: BottomNavigationTabs, _ active: Bool) -> some View {
         Button(action: {
-            tabDidSelect(tab)
+            withAnimation(.easeInOut(duration: 0.3)) {
+                tabDidSelect(tab)
+            }
         }) {
-            active
-                ? AnyView(tabTitle(tab))
-                : AnyView(tabIcon(tab))
+            Group {
+                if active {
+                    tabTitle(tab)
+                        .transition(.opacity)
+                } else {
+                    tabIcon(tab)
+                        .transition(.opacity)
+                }
+            }
         }
         .frame(width: 58, height: 44)
         .anchorPreference(key: TabPreferenceKey.self, value: .bottom, transform: { preference in
