@@ -12,25 +12,60 @@ struct ConversationView: View {
     @StateObject var viewState: ConversationViewState
     
     var body: some View {
-        VStack {
-                
-            ScrollView {
-                ForEach(0..<30, id: \.self) { tempView in
-                    ChatRowView(userAvatar: Image(.avatar), userName: "Cao Thang", lastMessageContent: "Good morning", unReadCount: 4, sentTime: "Today", isOnline: true)
-                        .padding(.top, 16)
+        ScrollView {
+            LazyVStack {
+                ForEach(viewState.conversations, id: \.id) { conversation in
+                    ConversationRowView(conversation: conversation) {
+                        ///TODO: Handle on taped on conversation
+                    }
+                   .padding(.vertical, 8)
+                   .padding(.horizontal, 24)
+               }
+           }
+        }
+        .searchable(
+            text: $viewState.searchText,
+            placement: .toolbar,
+            prompt: "search",
+        )
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Text("main.conversation.title")
+                    .applySubHeader1Style()
+            }
+            ToolbarItem(placement: .topBarTrailing) {
+                HStack {
+                    Button(action: {
+                        
+                    }){
+                        Image(.newMessageIcon)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 24, height: 24)
+                    }
+                    
+                    Button(action: {
+                        
+                    }){
+                        Image(.maskAsReadIcon)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 24, height: 24)
+                    }
                 }
             }
-            .searchable(text: $viewState.placeHolderText, prompt: "Search")
-            
-            Spacer()
         }
-        .padding(.horizontal, 24)
+        .onAppear{
+            self.viewState.viewDidLoad()
+        }
     }
 }
 
 struct ConversationPreviews: PreviewProvider {
     static var previews: some View {
-        ApplicationViewBuilder.stub.build(view: .conversation)
+        NavigationStack {
+            ApplicationViewBuilder.stub.build(view: .conversation)
+        }
     }
 }
 

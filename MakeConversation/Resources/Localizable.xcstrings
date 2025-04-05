@@ -4,16 +4,10 @@
     "" : {
 
     },
-    "?" : {
-
-    },
     "%@" : {
 
     },
     "%lld" : {
-
-    },
-    "Cant load last message content" : {
 
     },
     "Change background Color" : {
@@ -42,6 +36,12 @@
             "state" : "translated",
             "value" : "Contacts"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liên hệ"
+          }
         }
       }
     },
@@ -52,6 +52,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chats"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hội thoại"
           }
         }
       }
@@ -64,6 +70,12 @@
             "state" : "translated",
             "value" : "More"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Thêm"
+          }
         }
       }
     },
@@ -73,8 +85,22 @@
     "Resend Code" : {
 
     },
-    "Search" : {
-
+    "search" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tìm kiếm"
+          }
+        }
+      }
     },
     "Show sheet" : {
 
@@ -84,6 +110,23 @@
     },
     "Title" : {
 
+    },
+    "today" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hôm nay"
+          }
+        }
+      }
     },
     "Turn off Sheet" : {
 
@@ -212,6 +255,23 @@
     },
     "Yes" : {
 
+    },
+    "yesterday" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yesterday"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hôm qua"
+          }
+        }
+      }
     },
     "Your Profile" : {
 

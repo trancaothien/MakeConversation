@@ -11,22 +11,26 @@ import SwiftUI
 struct MainView: View {
     
     @StateObject var viewState: MainViewState
-    @State var currentTab: BottomNavigationTabs = .conversation
     
     var body: some View {
-        BottomNavigationView(currentTab: $currentTab, tabDidSelect: {tab in
-            currentTab = tab
+        BottomNavigationView(currentTab: $viewState.currentTab, tabDidSelect: {tab in
+            viewState.currentTab = tab
         }) {
-            switch currentTab {
-            case .contact:
-                ApplicationViewBuilder.stub.build(view: .contact)
-            case .conversation:
-                ApplicationViewBuilder.stub.build(view: .conversation)
-            case .setting:
-                ApplicationViewBuilder.stub.build(view: .setting)
-            }
+            content(for: viewState.currentTab)
         }
         .ignoresSafeArea(.keyboard, edges: .bottom)
+    }
+    
+    @ViewBuilder
+    private func content(for tab: BottomNavigationTabs) -> some View {
+        switch tab {
+        case .contact:
+            ApplicationViewBuilder.stub.build(view: .contact)
+        case .conversation:
+            ApplicationViewBuilder.stub.build(view: .conversation)
+        case .setting:
+            ApplicationViewBuilder.stub.build(view: .setting)
+        }
     }
 }
 
