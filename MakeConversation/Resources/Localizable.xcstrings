@@ -19,12 +19,6 @@
     "Change background Color" : {
 
     },
-    "Chats" : {
-
-    },
-    "Contacts" : {
-
-    },
     "Enter Code" : {
 
     },
@@ -40,8 +34,38 @@
     "Last Name (Optional)" : {
 
     },
-    "More" : {
-
+    "main.contact.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contacts"
+          }
+        }
+      }
+    },
+    "main.conversation.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chats"
+          }
+        }
+      }
+    },
+    "main.setting.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "More"
+          }
+        }
+      }
     },
     "No" : {
 

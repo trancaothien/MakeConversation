@@ -28,9 +28,8 @@ final class ApplicationViewBuilder : Assembly, ObservableObject {
             buildSetting()
         case .walkthrough:
             buildWalkthrough()
-        case .verification: // ✅ Ensure it matches the enum
+        case .verification:
             buildVerification()
-                
         case .verificationOTP(let phoneNumber):
             buildVerificationOTP(phoneNumber)
         case .verificationProfile:
