@@ -14,7 +14,25 @@ struct SettingView: View {
     
     var body: some View {
         VStack {
-            Text("Hello iOS/ Setting View")
+            //User
+            UserRowView( action: {
+                print("Clicked on User Button")
+            })
+                .padding(.horizontal, 16)
+                .padding(.top, 8)
+                .padding(.bottom, 8)
+            
+            //Menu Setting
+            MenuView()
+                .padding(.horizontal, 16)
+            
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Text("main.setting.title")
+                    .applySubHeader1Style()
+            }
+            
         }
         
     }

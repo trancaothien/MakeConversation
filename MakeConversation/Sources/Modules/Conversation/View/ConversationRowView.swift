@@ -46,6 +46,7 @@ struct ConversationRowView: View {
                 }
                 
                 HStack {
+                    //content of latest Message
                     Text(conversation.latestMessage)
                         .foregroundColor(.disable)
                         .applyMetadata1Style()
