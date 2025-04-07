@@ -13,13 +13,20 @@ struct SettingView: View {
     @StateObject var viewState: SettingViewState
     
     var body: some View {
-        Text("Hello iOS / SettingView")
+        VStack {
+            Text("Hello iOS/ Setting View")
+        }
+        
     }
 }
 
+
+
 struct SettingPreviews: PreviewProvider {
     static var previews: some View {
-        ApplicationViewBuilder.stub.build(view: .setting)
+        NavigationStack {
+            ApplicationViewBuilder.stub.build(view: .setting)
+        }
     }
 }
 

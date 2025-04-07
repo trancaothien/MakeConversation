@@ -8,7 +8,7 @@
 import Foundation
 
 // Function to convert string time to different formats
-func convertTimeString(_ timeString: String) -> String {
+func convertTimeString(_ timeString: String, showTimeAgo: Bool = false) -> String {
     // Define the date formatter for input string
     let inputFormatter = DateFormatter()
     inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
@@ -24,6 +24,14 @@ func convertTimeString(_ timeString: String) -> String {
     
     // Check if the date is today or yesterday
     if calendar.isDateInToday(date) {
+        if showTimeAgo {
+            let components = calendar.dateComponents([.hour, .minute], from: date, to: currentDate)
+                        if let hour = components.hour, hour >= 1 {
+                            return "\(hour) hours ago"
+                        } else if let minute = components.minute {
+                            return "\(minute) minutes ago"
+                        }
+        }
         return String(localized: "today")
     } else if calendar.isDateInYesterday(date) {
         return String(localized: "yesterday")

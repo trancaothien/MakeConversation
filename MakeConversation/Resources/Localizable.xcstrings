@@ -19,10 +19,7 @@
     "First Name (Required)" : {
 
     },
-    "Hello iOS / contact view" : {
-
-    },
-    "Hello iOS / SettingView" : {
+    "Hello iOS/ Setting View" : {
 
     },
     "Last Name (Optional)" : {
@@ -80,6 +77,9 @@
       }
     },
     "No" : {
+
+    },
+    "Online" : {
 
     },
     "Resend Code" : {
