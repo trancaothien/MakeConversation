@@ -29,6 +29,16 @@
 		1CF323852D80893E0054F1D7 /* MakeConversationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeConversationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BC49923F2DA50DBB00C06063 /* Exceptions for "MakeConversation" folder in "MakeConversation" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Configurations/Info.plist,
+			);
+			target = 1CF323682D8089380054F1D7 /* MakeConversation */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1CF3237E2D80893E0054F1D7 /* MakeConversationTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -42,6 +52,9 @@
 		};
 		1CF323AB2D8089AB0054F1D7 /* MakeConversation */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BC49923F2DA50DBB00C06063 /* Exceptions for "MakeConversation" folder in "MakeConversation" target */,
+			);
 			path = MakeConversation;
 			sourceTree = "<group>";
 		};
@@ -402,7 +415,7 @@
 				DEVELOPMENT_TEAM = DDNDDQXP4R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = /Users/trancaothien/Development/iOS/MakeConversation/MakeConversation/Configurations/info.plist;
+				INFOPLIST_FILE = MakeConversation/Configurations/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -437,7 +450,7 @@
 				DEVELOPMENT_TEAM = DDNDDQXP4R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = /Users/trancaothien/Development/iOS/MakeConversation/MakeConversation/Configurations/info.plist;
+				INFOPLIST_FILE = MakeConversation/Configurations/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

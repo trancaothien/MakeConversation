@@ -24,6 +24,7 @@ func convertTimeString(_ timeString: String) -> String {
     
     // Check if the date is today or yesterday
     if calendar.isDateInToday(date) {
+        
         return String(localized: "today")
     } else if calendar.isDateInYesterday(date) {
         return String(localized: "yesterday")
