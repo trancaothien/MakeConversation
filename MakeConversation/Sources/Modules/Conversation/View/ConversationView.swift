@@ -26,7 +26,7 @@ struct ConversationView: View {
         .searchable(
             text: $viewState.searchText,
             placement: .toolbar,
-            prompt: "search",
+            prompt: "search"
         )
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {

@@ -77,6 +77,7 @@ struct ConversationRowView: View {
         avatarUrl: nil,
         userName: "Athalia Putri",
         latestMessage: "Good morning, did you sleep well?",
+        lastActiveTime: "2025-04-05T10:44:00+0000",
         time: "2025-04-05T10:44:00+0000",
         isOnline: true,
         unreadCount: 0

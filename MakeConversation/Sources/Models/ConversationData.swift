@@ -12,6 +12,7 @@ struct ConversationData: Codable {
     let avatarUrl: String?
     let userName: String
     let latestMessage: String
+    let lastActiveTime: String
     let time: String
     let isOnline: Bool
     let unreadCount: Int
