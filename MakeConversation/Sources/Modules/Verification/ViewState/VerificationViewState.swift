@@ -22,10 +22,6 @@ final class VerificationViewState: ObservableObject, VerificationViewStateProtoc
     @Published var backButtonDidTap: Bool = false
     @Published var continueButtonDidTap: Bool = false
     @Published var enableContinueButton: Bool = false
-
-    static func callNewText() -> String {
-        return "This is New Text from callNewText()"
-    }
     
     func set(with presener: VerificationPresenterProtocol) {
         self.presenter = presener

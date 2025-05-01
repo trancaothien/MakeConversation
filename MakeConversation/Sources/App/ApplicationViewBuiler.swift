@@ -28,13 +28,14 @@ final class ApplicationViewBuilder : Assembly, ObservableObject {
             buildSetting()
         case .walkthrough:
             buildWalkthrough()
-        case .verification: // ✅ Ensure it matches the enum
+        case .verification:
             buildVerification()
-                
         case .verificationOTP(let phoneNumber):
             buildVerificationOTP(phoneNumber)
         case .verificationProfile:
             buildVerificationProfile()
+        case .chatRoom(let conversationData):
+            buildChatRoom(conversationData: conversationData)
         }
     }
     
@@ -81,6 +82,11 @@ final class ApplicationViewBuilder : Assembly, ObservableObject {
     @ViewBuilder
     fileprivate func buildVerificationProfile() -> some View {
         container.resolve(VerificationProfileAssembly.self).build()
+    }
+    
+    @ViewBuilder
+    fileprivate func buildChatRoom(conversationData: ConversationData) -> some View {
+        container.resolve(ChatRoomAssembly.self).build(conversationData: conversationData)
     }
     
 }

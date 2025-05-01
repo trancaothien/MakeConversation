@@ -25,7 +25,7 @@ extension Text {
     ///   - weight: The font weight.
     /// - Returns: A modified `Text` view with the specified style.
     func applyTextStyle(size: CGFloat, color: Color, weight: Font.Weight) -> Text {
-        self.font(Font.mulish(size: size, weight: weight))
+        self.font(.mulish(size: size, weight: weight))
             .foregroundColor(color)
     }
     

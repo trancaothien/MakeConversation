@@ -10,7 +10,6 @@ import SwiftUI
 
 final class VerificationProfilePresenter: VerificationProfilePresenterProtocol {
     
-    
     private let router: VerificationProfileRouterProtocol
     private weak var viewState: VerificationProfileViewStateProtocol?
     private let interactor: VerificationProfileInteractorProtocol
@@ -33,5 +32,4 @@ extension VerificationProfilePresenter {
     func saveButtonDidTap() {
         self.router.goHome()
     }
-    
 }

@@ -20,6 +20,7 @@ final class VerificationProfileViewState: ObservableObject, VerificationProfileV
     @Published var lastName: String = ""
     @Published var saveButtonDidTap: Bool = false
     @Published var avatarImage: UIImage? = nil
+    @Published var userID = UUID()
     
     func set(with presener: VerificationProfilePresenterProtocol) {
         self.presenter = presener
@@ -45,6 +46,8 @@ extension VerificationProfileViewState {
         $saveButtonDidTap.sink(receiveValue: { value in
             if value {
                 let fullName = self.firstName + self.lastName
+                
+                
                 self.presenter?.saveButtonDidTap()
             }
         })

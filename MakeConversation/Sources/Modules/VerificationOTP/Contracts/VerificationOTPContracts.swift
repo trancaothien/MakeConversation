@@ -12,7 +12,7 @@ import SwiftUI
 // Router
 protocol VerificationOTPRouterProtocol: RouterProtocol {
     func back()
-    func goHome()
+//    func goHome()
     func goRegister()
 }
 
@@ -21,7 +21,6 @@ protocol VerificationOTPPresenterProtocol: PresenterProtocol {
     func backButtonDidTap()
     func resendButtonDidTap()
     func codeVerifyDidSend()
-    
 }
 
 // Interactor

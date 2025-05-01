@@ -9,7 +9,7 @@
 import Foundation
 
 final class VerificationOTPRouter: VerificationOTPRouterProtocol {
-    
+
     private var navigation: any NavigationServiceType
     
     init(navigation: any NavigationServiceType){
@@ -22,9 +22,9 @@ extension VerificationOTPRouter {
         self.navigation.pop()
     }
     
-    func goHome() {
-        self.navigation.push(.main)
-    }
+//    func goHome() {
+//        self.navigation.push(.main(<#String#>, <#String#>))
+//    }
     
     func goRegister() {
         // TODO: Navigate to register screen

@@ -34,6 +34,7 @@ struct MakeConversationApp: App {
         container.apply(VerificationAssembly.self)
         container.apply(VerificationOTPAssembly.self)
         container.apply(VerificationProfileAssembly.self)
+        container.apply(ChatRoomAssembly.self)
 
         return container
     }()
