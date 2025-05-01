@@ -39,7 +39,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-<<<<<<< HEAD
 		BC5E52262DC34E3500B5E0A4 /* Exceptions for "MakeConversation" folder in "MakeConversationTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -62,12 +61,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Configuration/Info/Info.plist,
-=======
-		BC8BD8482DC0D41E00FE2CC5 /* Exceptions for "MakeConversation" folder in "MakeConversation" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
->>>>>>> 932922f ([UI] chat room view)
 			);
 			target = 1CF323682D8089380054F1D7 /* MakeConversation */;
 		};
@@ -87,13 +80,9 @@
 		1CF323AB2D8089AB0054F1D7 /* MakeConversation */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-<<<<<<< HEAD
 				BC5E52472DC350C000B5E0A4 /* Exceptions for "MakeConversation" folder in "MakeConversation" target */,
 				BC5E52262DC34E3500B5E0A4 /* Exceptions for "MakeConversation" folder in "MakeConversationTests" target */,
 				BC5E52272DC34E3500B5E0A4 /* Exceptions for "MakeConversation" folder in "MakeConversationUITests" target */,
-=======
-				BC8BD8482DC0D41E00FE2CC5 /* Exceptions for "MakeConversation" folder in "MakeConversation" target */,
->>>>>>> 932922f ([UI] chat room view)
 			);
 			path = MakeConversation;
 			sourceTree = "<group>";
@@ -473,17 +462,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DEVELOPMENT_ASSET_PATHS = "\"MakeConversation/Resources/Preview Content\"";
-<<<<<<< HEAD
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MakeConversation/Configuration/Info/Info.plist;
-=======
-				DEVELOPMENT_TEAM = 4U92KW5437;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MakeConversation/Info.plist;
->>>>>>> 932922f ([UI] chat room view)
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow access to your Microphone";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to the Photo Library";
@@ -518,17 +500,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DEVELOPMENT_ASSET_PATHS = "\"MakeConversation/Resources/Preview Content\"";
-<<<<<<< HEAD
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MakeConversation/Configuration/Info/Info.plist;
-=======
-				DEVELOPMENT_TEAM = 4U92KW5437;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MakeConversation/Info.plist;
->>>>>>> 932922f ([UI] chat room view)
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow access to your Microphone";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to the Photo Library";

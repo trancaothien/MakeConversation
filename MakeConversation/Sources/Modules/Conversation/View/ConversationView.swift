@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ConversationView: View {
     @StateObject var viewState: ConversationViewState
-    
+    s
     var body: some View {
         ScrollView {
             LazyVStack {

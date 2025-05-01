@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1CF323682D8089380054F1D7"
-               BuildableName = "MakeConversation.app"
+               BuildableName = "Make Conversation.app"
                BlueprintName = "MakeConversation"
                ReferencedContainer = "container:MakeConversation.xcodeproj">
             </BuildableReference>
@@ -69,7 +69,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1CF323682D8089380054F1D7"
-            BuildableName = "MakeConversation.app"
+            BuildableName = "Make Conversation.app"
             BlueprintName = "MakeConversation"
             ReferencedContainer = "container:MakeConversation.xcodeproj">
          </BuildableReference>
@@ -86,7 +86,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1CF323682D8089380054F1D7"
-            BuildableName = "MakeConversation.app"
+            BuildableName = "Make Conversation.app"
             BlueprintName = "MakeConversation"
             ReferencedContainer = "container:MakeConversation.xcodeproj">
          </BuildableReference>
