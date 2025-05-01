@@ -9,7 +9,7 @@
 import SwiftUI
 
 final class MainViewState: ObservableObject, MainViewStateProtocol {    
-    private let id = UUID()
+//    private let id = UUID()
     private var presenter: MainPresenterProtocol?
     
     @Published var currentTab: BottomNavigationTabs = .conversation

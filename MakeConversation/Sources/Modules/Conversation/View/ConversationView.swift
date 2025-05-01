@@ -16,7 +16,8 @@ struct ConversationView: View {
             LazyVStack {
                 ForEach(viewState.conversations, id: \.id) { conversation in
                     ConversationRowView(conversation: conversation) {
-                        ///TODO: Handle on taped on conversation
+                        viewState.selectedConversation = conversation
+                        viewState.conversationDidTap = true
                     }
                    .padding(.vertical, 8)
                    .padding(.horizontal, 24)

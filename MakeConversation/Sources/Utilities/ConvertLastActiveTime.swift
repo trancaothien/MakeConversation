@@ -26,7 +26,7 @@ func convertLastActiveTime(_ lastActiveTimeString: String) -> String {
     
     // If the time difference is less than a minute
     if timeDifference < 60 {
-        return "userStatus.justNow".localized
+        return String(localized: "userStatus.justNow")
     }
     // If the time difference is less than an hour
     else if timeDifference < 3600 {
@@ -40,7 +40,7 @@ func convertLastActiveTime(_ lastActiveTimeString: String) -> String {
     }
     // If the date is yesterday
     else if calendar.isDateInYesterday(lastActiveDate) {
-        return "userStatus.yesterday".localized
+        return String(localized: "userStatus.yesterday")
     }
     // If the date is within the last week
     else if timeDifference < 604800 { // 7 days in seconds
@@ -51,12 +51,12 @@ func convertLastActiveTime(_ lastActiveTimeString: String) -> String {
     else if calendar.isDate(lastActiveDate, equalTo: currentDate, toGranularity: .year) {
         let outputFormatter = DateFormatter()
         outputFormatter.dateFormat = "dd MMMM" // Format as "31 March"
-        return "Last seen on".localized + "\(outputFormatter.string(from: lastActiveDate))"
+        return "Last seen on" + "\(outputFormatter.string(from: lastActiveDate))"
     }
     // If the date is in a different year
     else {
         let outputFormatter = DateFormatter()
         outputFormatter.dateFormat = "dd MMMM yyyy" // Format as "31 March 2024"
-        return "Last seen on".localized + "\(outputFormatter.string(from: lastActiveDate))"
+        return "Last seen on" + "\(outputFormatter.string(from: lastActiveDate))"
     }
 }

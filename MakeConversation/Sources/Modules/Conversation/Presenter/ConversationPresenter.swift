@@ -22,5 +22,7 @@ final class ConversationPresenter: ConversationPresenterProtocol {
         self.viewState = viewState
     }
     
-    
+    func conversationDidTap(for roomId: Int, conversationData: ConversationData) {
+        self.router.navigateToRoom(by: roomId, conversationData: conversationData)
+    }
 }

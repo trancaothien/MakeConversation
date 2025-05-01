@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ProfileItemView: View {
-
-    let action: () -> Void
     
-    let userData: UserData
+    @State var userData: UserData
+    
+    let action: () -> Void
     
     var body: some View {
         Button(action: {

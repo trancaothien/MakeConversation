@@ -8,70 +8,62 @@
 
 import SwiftUI
 
-extension String {
-    var localized: String {
-        NSLocalizedString(self, comment: "")
-    }
-}
-
 struct SettingView: View {
+    
     @StateObject var viewState: SettingViewState
     
-
+    private var chatSettingGroup: [(ImageResource, String, () -> Void)] {
+        [
+            (ImageResource.accountInSettingIcon, String(localized: "main.setting.account"), self.viewState.accountSettingDidTap),
+            (ImageResource.chatInSettingIcon, String(localized: "main.setting.chats"), self.viewState.chatSettingDidTap)
+        ]
+    }
+    
+    private var appSettingGroup: [(ImageResource, String, () -> Void)] {
+        [
+            (ImageResource.appereanceInSettingIcon, String(localized: "main.setting.appereance"), self.viewState.appreeanceSettingDidTap),
+            (ImageResource.notificationInSettingIcon, String(localized: "main.setting.notification"), self.viewState.notificationSettingDidTap),
+            (ImageResource.privacyInSettingIcon, String(localized: "main.setting.privacy"), self.viewState.privacySettingDidTap),
+            (ImageResource.dataUsageInSettingIcon, String(localized: "main.setting.datausage"), self.viewState.datausageSettingDidTap),
+        ]
+    }
+    
+    private var supportSettingGroup: [(ImageResource, String, () -> Void)] {
+        [
+            (ImageResource.helpInSettingIcon, String(localized: "main.setting.help"), self.viewState.helpSettingDidTap),
+            (ImageResource.inviteInSettingIcon, String(localized: "main.setting.inviteyourfriends"), self.viewState.inviteSettingDidTap),
+        ]
+    }
     
     var body: some View {
-        VStack(spacing: 0) {
-            // Main content
-            ScrollView {
-                VStack() {
-                    // User profile section
-                    ProfileItemView(action: {
-                        print("Clicked on Profile")
-                    }, userData: viewState.userData)
+        ScrollView {
+            VStack {
+                ProfileItemView(userData: viewState.userData) {
                     
-                    
-                    
-                    // Menu items
-                    VStack {
-                        MenuItemView(icon: .accountInSettingIcon, title: "main.setting.account".localized, action: {
-                            print("Clicked on Account")
-                        })
-                        MenuItemView(icon: .chatInSettingIcon, title: "main.setting.chats".localized, action: {
-                            print("Clicked on Chats")
-                        })
-                    }
-                    .padding(.vertical, 16)
-                    
-                    VStack {
-                        MenuItemView(icon: .appereanceInSettingIcon, title: "main.setting.appereance".localized, action: {
-                            print("Clicked on Appereance")
-                        })
-                        MenuItemView(icon: .notificationInSettingIcon, title: "main.setting.notification".localized, action: {
-                            print("Clicked on Notification")
-                        })
-                        MenuItemView(icon: .privacyInSettingIcon, title: "main.setting.privacy".localized, action: {
-                            print("Clicked on Privacy")
-                        })
-                        MenuItemView(icon: .dataUsageInSettingIcon, title: "main.setting.datausage".localized, action: {
-                            print("Clicked on Data Usage")
-                        })
-                        
-                        Rectangle()
-                            .frame(height: 1.2)
-                            .foregroundColor(.neutralDivider)
-                            .padding(.vertical, 8)
-                        
-                        MenuItemView(icon: .helpInSettingIcon, title: "main.setting.help".localized, action: {
-                            print("Clicked on Help")
-                        })
-                        MenuItemView(icon: .inviteInSettingIcon, title: "main.setting.inviteyourfriends".localized, action: {
-                            print("Clicked on Invite Your Friends")
-                        })
+                }
+                
+                VStack {
+                    ForEach(chatSettingGroup, id: \.0) { item in
+                        MenuItemView(icon: item.0, title: item.1, action: item.2)
                     }
                 }
-                .padding(.horizontal, 16)
+                
+                VStack {
+                    ForEach(appSettingGroup, id: \.0) { item in
+                        MenuItemView(icon: item.0, title: item.1, action: item.2)
+                    }
+                    
+                    Rectangle()
+                        .frame(height: 1)
+                        .foregroundColor(.neutralDivider)
+                        .padding(.vertical, 8)
+                    
+                    ForEach(supportSettingGroup, id: \.0) { item in
+                        MenuItemView(icon: item.0, title: item.1, action: item.2)
+                    }
+                }
             }
-            .padding(.bottom, 141)
+            .padding(16)
         }
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
@@ -79,18 +71,8 @@ struct SettingView: View {
                     .applySubHeader1Style()
             }
         }
-        .onAppear() {
-            self.viewState.viewDidLoad()
-        }
     }
 }
-
-//Menu view
-
-
-// User profile
-
-
 
 struct SettingPreviews: PreviewProvider {
     static var previews: some View {

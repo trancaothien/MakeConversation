@@ -11,12 +11,12 @@ import SwiftUI
 
 // Router
 protocol ConversationRouterProtocol: RouterProtocol {
-
+    func navigateToRoom(by roomId: Int, conversationData: ConversationData)
 }
 
 // Presenter
 protocol ConversationPresenterProtocol: PresenterProtocol {
-
+    func conversationDidTap(for roomId: Int, conversationData: ConversationData)
 }
 
 // Interactor

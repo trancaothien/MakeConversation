@@ -7,14 +7,22 @@
 //
 
 import SwiftUI
+import Combine
 
 final class ConversationViewState: ObservableObject, ConversationViewStateProtocol {    
     private let id = UUID()
     private var presenter: ConversationPresenterProtocol?
+    private var cancellables = Set<AnyCancellable>()
     
     //Data state
     @Published var searchText: String = ""
     @Published var conversations: [ConversationData] = []
+    @Published var conversationDidTap: Bool = false
+    @Published var selectedConversation: ConversationData? = nil
+    
+    init() {
+        observeConversationTap()
+    }
     
     func set(with presener: ConversationPresenterProtocol) {
         self.presenter = presener
@@ -138,5 +146,15 @@ final class ConversationViewState: ObservableObject, ConversationViewStateProtoc
         ]
         
         conversations = mock
+    }
+}
+
+// MARK: - Handle on pressed
+extension ConversationViewState {
+    func observeConversationTap() {
+        $conversationDidTap.sink(receiveValue: { value in
+            self.presenter?.conversationDidTap(for: 0, conversationData: self.selectedConversation!)
+        })
+        .store(in: &cancellables)
     }
 }

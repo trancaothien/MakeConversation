@@ -13,8 +13,7 @@ struct ContactRowView: View {
     
     var body: some View {
         VStack {
-            HStack {
-                //User avatar
+            HStack(spacing: 16) {
                 ZStack(alignment: .topTrailing) {
                     if let avatar = contactData.avatarUrl {
                         AvatarUrl(url: avatar)
@@ -34,19 +33,14 @@ struct ContactRowView: View {
                     }
                 }
                 
-                //User name and last active
                 VStack(alignment: .leading) {
                     HStack {
                         Text(contactData.userName)
                             .applyBody1Style()
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .lineLimit(1)
-                        
-                        Spacer()
-                        
                     }
                     
-                    //Display user last active
                     HStack {
                         if contactData.isOnline {
                             Text("userStatus.isOnline")
@@ -71,12 +65,10 @@ struct ContactRowView: View {
                 didTap()
             }
             
-//            Divider()
-//                .frame(height: 30)
             Rectangle()
-                .frame(height: 1.2)
+                .frame(height: 1)
                 .foregroundColor(.neutralDivider)
-                .padding(.top, 12.5)
+                .padding(.top, 12)
         }
         
     }

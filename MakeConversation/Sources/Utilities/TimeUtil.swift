@@ -45,3 +45,27 @@ func convertTimeString(_ timeString: String) -> String {
         return outputFormatter.string(from: date)
     }
 }
+
+func convertTimeToString() -> String {
+    let date = Date()
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+    formatter.timeZone = TimeZone.current
+    return formatter.string(from: date)
+}
+
+func convertToHourMinute(from timeString: String) -> String? {
+    let inputFormatter = DateFormatter()
+    inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+    inputFormatter.timeZone = TimeZone.current
+
+    if let date = inputFormatter.date(from: timeString) {
+        let outputFormatter = DateFormatter()
+        outputFormatter.dateFormat = "HH:mm"
+        outputFormatter.timeZone = TimeZone.current
+        return outputFormatter.string(from: date)
+    } else {
+        return nil
+    }
+}
+

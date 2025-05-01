@@ -7,11 +7,11 @@
 
 import Foundation
 
-class UserData {
-    var id: UUID
-    var avatarUrl: String?
-    var userName: String
-    var phoneNumber: String
+class UserData: ObservableObject {
+    @Published var id: UUID
+    @Published var avatarUrl: String?
+    @Published var userName: String
+    @Published var phoneNumber: String
 
     init(id: UUID = UUID(), avatarUrl: String? = nil, userName: String, phoneNumber: String) {
         self.id = id
@@ -20,3 +20,5 @@ class UserData {
         self.phoneNumber = phoneNumber
     }
 }
+
+

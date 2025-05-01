@@ -65,6 +65,7 @@ struct BottomNavigationView<Content: View>: View {
                 }
             }
         }
+        .toolbarBackgroundVisibility(.visible, for: .bottomBar)
     }
     
     private func createCircle(_ geometry: GeometryProxy, _ preferences: [TabPreferenceData]) -> some View {
@@ -93,10 +94,8 @@ struct BottomNavigationView<Content: View>: View {
             Group {
                 if active {
                     tabTitle(tab)
-                        .transition(.opacity)
                 } else {
                     tabIcon(tab)
-                        .transition(.opacity)
                 }
             }
         }

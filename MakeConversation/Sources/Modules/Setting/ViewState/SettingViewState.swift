@@ -8,12 +8,19 @@
 
 import SwiftUI
 
-final class SettingViewState: ObservableObject, SettingViewStateProtocol {    
+class SettingViewState: ObservableObject, SettingViewStateProtocol {
     private let id = UUID()
     private var presenter: SettingPresenterProtocol?
     
+    
     //for test
-    let userData = UserData(id: UUID(), avatarUrl: "https://avatar.iran.liara.run/public", userName: "Cao Thang", phoneNumber: "+84 347 016 318")
+    var userData = UserData(
+        id: UUID(),
+        avatarUrl: "https://avatar.iran.liara.run/public",
+        userName: "Cao Thang",
+        phoneNumber: "+84 347 016 318"
+    )
+    
     
     @Published var conversations: ConversationData = ConversationData(
         avatarUrl: "https://gravatar.com/avatar/20de6398e807f31bb3c5fbc3e7d84d2b?s=400&d=robohash&r=x",
@@ -29,12 +36,35 @@ final class SettingViewState: ObservableObject, SettingViewStateProtocol {
         self.presenter = presener
     }
     
-    func viewDidLoad() {
-        // ...
-        
-            
+    var accountSettingDidTap: () -> Void = {
 
-        
+    }
+
+    var chatSettingDidTap: () -> Void = {
+
+    }
+
+    var appreeanceSettingDidTap: () -> Void = {
+
+    }
+
+    var notificationSettingDidTap: () -> Void = {
+
+    }
+
+    var privacySettingDidTap: () -> Void = {
+
+    }
+
+    var datausageSettingDidTap: () -> Void = {
+
+    }
+
+    var helpSettingDidTap: () -> Void = {
+
+    }
+
+    var inviteSettingDidTap: () -> Void = {
 
     }
 }

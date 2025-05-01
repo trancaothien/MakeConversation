@@ -16,6 +16,23 @@
     "Change background Color" : {
 
     },
+    "chatRoom.messageStatus" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Read"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Đã xem"
+          }
+        }
+      }
+    },
     "Enter Code" : {
 
     },
@@ -262,6 +279,9 @@
       }
     },
     "Turn off Sheet" : {
+
+    },
+    "Type here" : {
 
     },
     "userStatus.isOnline" : {

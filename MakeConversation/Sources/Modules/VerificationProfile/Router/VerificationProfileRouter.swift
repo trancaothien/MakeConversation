@@ -9,7 +9,7 @@
 import Foundation
 
 final class VerificationProfileRouter: VerificationProfileRouterProtocol {
-    
+
     private var navigation: any NavigationServiceType
     
     init(navigation: any NavigationServiceType){

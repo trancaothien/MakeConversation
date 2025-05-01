@@ -9,10 +9,15 @@
 import Foundation
 
 final class ConversationRouter: ConversationRouterProtocol {
+    
     private var navigation: any NavigationServiceType
     
     init(navigation: any NavigationServiceType){
         self.navigation = navigation
+    }
+    
+    func navigateToRoom(by roomId: Int, conversationData: ConversationData) {
+        navigation.push(.chatRoom(conversationData))
     }
        
 }
