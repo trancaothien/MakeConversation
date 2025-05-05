@@ -13,9 +13,6 @@
     "+84 347 016 318" : {
 
     },
-    "Change background Color" : {
-
-    },
     "chatRoom.messageStatus" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -33,10 +30,19 @@
         }
       }
     },
-    "Enter Code" : {
+    "Check your Email" : {
+
+    },
+    "Create a Account" : {
+
+    },
+    "Enter your %@" : {
 
     },
     "First Name (Required)" : {
+
+    },
+    "Forgot password ?" : {
 
     },
     "Last Name (Optional)" : {
@@ -229,10 +235,13 @@
         }
       }
     },
+    "NEXT" : {
+
+    },
     "No" : {
 
     },
-    "Resend Code" : {
+    "Or" : {
 
     },
     "search" : {
@@ -252,10 +261,13 @@
         }
       }
     },
-    "Show sheet" : {
+    "Sign In" : {
 
     },
     "Splash Screen" : {
+
+    },
+    "Submit" : {
 
     },
     "Title" : {
@@ -277,9 +289,6 @@
           }
         }
       }
-    },
-    "Turn off Sheet" : {
-
     },
     "Type here" : {
 
@@ -454,7 +463,7 @@
         }
       }
     },
-    "We have sent you an SMS with the code to %@" : {
+    "We sent a code to %@" : {
 
     },
     "Yes" : {

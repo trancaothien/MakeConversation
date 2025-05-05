@@ -16,7 +16,7 @@ final class WalkthroughRouter: WalkthroughRouterProtocol {
     }
     
     func navigateToVerification() {
-        self.navigation.push(.verification)
+        self.navigation.push(.login)
     }
     
     func navigateToTermAndService() {

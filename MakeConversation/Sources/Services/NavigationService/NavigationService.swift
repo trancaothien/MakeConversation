@@ -81,7 +81,7 @@ enum Views: Identifiable, Equatable, Hashable {
     case conversation
     case setting
     case walkthrough
-    case verification
+    case login
     case verificationOTP(String)
     case verificationProfile
     case chatRoom(ConversationData)
@@ -100,8 +100,8 @@ enum Views: Identifiable, Equatable, Hashable {
             return "setting"
         case .walkthrough:
             return "walkthrough"
-        case .verification:
-            return "verification"
+        case .login:
+            return "login"
         case .verificationOTP:
             return "verificationOTP"
         case .verificationProfile:
