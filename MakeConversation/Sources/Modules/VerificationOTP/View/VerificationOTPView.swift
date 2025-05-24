@@ -15,28 +15,36 @@ struct VerificationOTPView: View {
     
     var body: some View {
         VStack {
+            ZStack {
+                RoundedRectangle(cornerRadius: 10)
+                    .frame(width: 52, height: 50)
+                    .foregroundColor(Color.neutral)
+                    
+                Image(systemName: "envelope")
+                    .foregroundColor(.blue)
+            }
+            .padding(.bottom, 24)
             
-            Spacer()
-                .frame(height: 170)
-            
-            Text("Enter Code")
+            Text("Check your Email")
                 .applyHeader2Style()
-                .padding(.bottom, 8)
+                .padding(.bottom, 6)
             
-            Text("We have sent you an SMS with the code to \(phoneNumber)")
-                .applyBody2Style()
-                .multilineTextAlignment(.center)
-                .padding(.bottom, 48)
+            Text("We sent a code to \(phoneNumber)")
+                .applyBody1Style()
+                .padding(.bottom, 16)
             
             CustomizableOTPView(otp: $viewState.otp, length: viewState.otp.count)
+                .padding(.bottom, 48)
             
-            Spacer()
-
-            Button("Resend Code") {
-                self.viewState.resendButtonDidTap = true
-                print("Clicked on Resend Code Button")
-            }
-            .buttonStyle(TextButtonStyle(width: .infinity, color: .branch))
+            Button(action: {
+                // TODO: Handle when user taped on NEXT button
+                
+            }, label: {
+                Text("Submit")
+                    .applySubHeader2Style(color: .white)
+            })
+            .buttonStyle(FilledButtonStyle(width: .infinity, height: .infinity))
+            .padding(.horizontal, 16)
         }
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {

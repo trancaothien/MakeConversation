@@ -31,7 +31,7 @@ struct MakeConversationApp: App {
         container.apply(ConversationAssembly.self)
         container.apply(SettingAssembly.self)
         container.apply(WalkthroughAssembly.self)
-        container.apply(VerificationAssembly.self)
+        container.apply(LoginAssembly.self)
         container.apply(VerificationOTPAssembly.self)
         container.apply(VerificationProfileAssembly.self)
         container.apply(ChatRoomAssembly.self)
