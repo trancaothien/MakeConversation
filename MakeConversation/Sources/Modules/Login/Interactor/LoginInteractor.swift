@@ -11,9 +11,9 @@ import Foundation
 
 final class LoginInteractor: LoginInteractorProtocol {
     
-}
-
-// MARK: Private
-extension LoginInteractor {
+    private let authService = AuthService.shared
     
+    func signIn(email: String, password: String, success: @escaping () -> Void, error: @escaping (String) -> Void) {
+        authService.signIn(email: email, password: password, success: success, error: error)
+    }
 }

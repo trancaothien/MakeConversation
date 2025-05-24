@@ -36,6 +36,9 @@
     "Create a Account" : {
 
     },
+    "Create Account" : {
+
+    },
     "Enter your %@" : {
 
     },
@@ -261,6 +264,9 @@
         }
       }
     },
+    "Set Details" : {
+
+    },
     "Sign In" : {
 
     },
@@ -485,6 +491,9 @@
           }
         }
       }
+    },
+    "Your new password must be different to previously used Passwords." : {
+
     },
     "Your Profile" : {
 
