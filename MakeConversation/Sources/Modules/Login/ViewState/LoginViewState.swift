@@ -57,7 +57,7 @@ extension LoginViewState {
         $nextButtonDidTap.sink(receiveValue: { value in
             if !value { return }
             self.presenter?.nextButtonDidTap(email: self.email, password: self.password, success: {
-                
+                self.presenter?.navigateToMainScreen()
             }, error: { message in
                 print(message)
             })

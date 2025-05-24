@@ -28,8 +28,14 @@ final class LoginPresenter: LoginPresenterProtocol {
 // MARK: For Router
 extension LoginPresenter {
     
+    func navigateToMainScreen() {
+        self.router.nextButtonDidTap()
+    }
+    
     func nextButtonDidTap(email: String, password: String, success: @escaping () -> Void, error: @escaping (String) -> Void) {
-        self.interactor.signIn(email: email, password: password, success: success, error: error)
+        self.interactor.signIn(email: email, password: password, success: {
+            success()
+        }, error: error)
     }
     
     func backButtonDidTap() {

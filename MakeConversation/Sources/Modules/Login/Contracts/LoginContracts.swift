@@ -22,6 +22,7 @@ protocol LoginPresenterProtocol: PresenterProtocol {
     func nextButtonDidTap(email: String, password: String, success: @escaping() -> Void, error: @escaping(String) -> Void)
     func backButtonDidTap()
     func createAccountButtonDidTap()
+    func navigateToMainScreen() 
 }
 
 // Interactor
