@@ -13,17 +13,21 @@ import SwiftUI
 protocol LoginRouterProtocol: RouterProtocol {
     func nextButtonDidTap()
     func backToPreviousScreen()
+    func createAccountButtonDidTap()
 }
+
 
 // Presenter
 protocol LoginPresenterProtocol: PresenterProtocol {
-    func nextButtonDidTap()
+    func nextButtonDidTap(email: String, password: String, success: @escaping() -> Void, error: @escaping(String) -> Void)
     func backButtonDidTap()
+    func createAccountButtonDidTap()
+    func navigateToMainScreen() 
 }
 
 // Interactor
 protocol LoginInteractorProtocol: InteractorProtocol {
-
+    func signIn(email: String, password: String, success: @escaping() -> Void, error: @escaping(String) -> Void)
 }
 
 // ViewState

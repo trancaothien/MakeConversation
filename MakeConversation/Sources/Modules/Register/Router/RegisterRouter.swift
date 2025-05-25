@@ -1,5 +1,5 @@
 //
-//  LoginRouter.swift
+//  RegisterRouter.swift
 //  MakeConversation
 //
 //  Created by Tran Cao Thang on 04/05/25
@@ -8,7 +8,9 @@
 
 import Foundation
 
-final class LoginRouter: LoginRouterProtocol {
+final class RegisterRouter: RegisterRouterProtocol {
+    
+    
     
     private var navigation: any NavigationServiceType
     
@@ -20,11 +22,11 @@ final class LoginRouter: LoginRouterProtocol {
         self.navigation.pop()
     }
     
-    func nextButtonDidTap() {
-        self.navigation.pushReplace(.main)
+    func continueButtonDidTap(_ phoneNumber: String) {
+        self.navigation.push(.verificationOTP(phoneNumber))
     }
     
-    func createAccountButtonDidTap() {
-        self.navigation.push(.register)
+    func submitButtonDidTap() {
+        self.navigation.pushReplace(.main)
     }
 }

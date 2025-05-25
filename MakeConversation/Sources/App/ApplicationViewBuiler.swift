@@ -36,6 +36,8 @@ final class ApplicationViewBuilder : Assembly, ObservableObject {
             buildVerificationProfile()
         case .chatRoom(let conversationData):
             buildChatRoom(conversationData: conversationData)
+        case .register:
+            buildRegister()
         }
     }
     
@@ -87,6 +89,11 @@ final class ApplicationViewBuilder : Assembly, ObservableObject {
     @ViewBuilder
     fileprivate func buildChatRoom(conversationData: ConversationData) -> some View {
         container.resolve(ChatRoomAssembly.self).build(conversationData: conversationData)
+    }
+    
+    @ViewBuilder
+    fileprivate func buildRegister() -> some View {
+        container.resolve(RegisterAssembly.self).build()
     }
     
 }

@@ -22,22 +22,20 @@ struct LoginView: View {
                     .padding(.bottom, 23.5)
                 
                 //to enter email and password
-                InputView(email: viewState.email, password: viewState.password)
+                InputView(email: $viewState.email, password: $viewState.password)
                 
                 VStack(alignment: .trailing) {
+                    
                     Button(action: {
                         print("Clicked on Forgot password")
                     }, label: {
                         Text("Forgot password ?")
                             .applySubHeader2Style()
-                        
                     })
                     .padding(.trailing, 16)
                     
                     Button(action: {
-                        // TODO: Handle when user taped on NEXT button
                         viewState.nextButtonDidTap = true
-                        print("nextButtonDidTap = \(viewState.nextButtonDidTap)")
                     }, label: {
                         Text("NEXT")
                             .applySubHeader2Style(color: .white)
@@ -46,12 +44,11 @@ struct LoginView: View {
                     .padding(.horizontal, 16)
                     .padding(.top, 16)
                     
-                    
                 }
                 .padding(.bottom, 36)
                 
                 //all method to login app (apple, google, facebook)
-                LoginMethodView()
+                LoginMethodView(createAccountButtonDidTap: $viewState.createAccountButtonDidTap)
             }
         }
         .ignoresSafeArea(.keyboard, edges: .all)

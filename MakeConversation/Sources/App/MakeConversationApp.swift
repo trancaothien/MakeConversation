@@ -35,6 +35,7 @@ struct MakeConversationApp: App {
         container.apply(VerificationOTPAssembly.self)
         container.apply(VerificationProfileAssembly.self)
         container.apply(ChatRoomAssembly.self)
+        container.apply(RegisterAssembly.self)
 
         return container
     }()
@@ -49,17 +50,6 @@ struct MakeConversationApp: App {
         WindowGroup {
             MakeConversationView(navigationService: navigationService, appViewBuilder: appViewBuilder)
         }
-        .onChange(of: scenePhase, perform: { phase in
-            switch phase {
-            case .active:
-                print("Active")
-            case .background:
-                print("Background")
-            case .inactive:
-                print("Inactive")
-            default:
-                print("Something...")
-            }
-        })
+       
     }
 }

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LoginMethodView: View {
+    
+    @Binding var createAccountButtonDidTap: Bool
+    
     var body: some View {
         VStack {
             HStack() {
@@ -42,7 +45,8 @@ struct LoginMethodView: View {
             
                 
             Button("Create a Account", action: {
-                print("Clicked on Create a Account")
+                print("Clicked on Create a account")
+                self.createAccountButtonDidTap = true
             })
             .foregroundColor(.black)
             .padding(.top, 17.5)
@@ -80,5 +84,5 @@ struct ButtonLoginMethodView: View {
 }
 
 #Preview {
-    LoginMethodView()
+    LoginMethodView(createAccountButtonDidTap: .constant(false))
 }

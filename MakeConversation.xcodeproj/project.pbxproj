@@ -7,12 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC4401502DCF4FE10064F775 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BC44014F2DCF4FE10064F775 /* Alamofire */; };
 		BC5E524F2DC3562600B5E0A4 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = BC5E524E2DC3562600B5E0A4 /* Auth */; };
 		BC5E52512DC3562600B5E0A4 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = BC5E52502DC3562600B5E0A4 /* Functions */; };
 		BC5E52532DC3562600B5E0A4 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = BC5E52522DC3562600B5E0A4 /* PostgREST */; };
 		BC5E52552DC3562600B5E0A4 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = BC5E52542DC3562600B5E0A4 /* Realtime */; };
 		BC5E52572DC3562600B5E0A4 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = BC5E52562DC3562600B5E0A4 /* Storage */; };
 		BC5E52592DC3562600B5E0A4 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = BC5E52582DC3562600B5E0A4 /* Supabase */; };
+		BCD41E262DC8DD16007D03E5 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BCD41E252DC8DD16007D03E5 /* FirebaseAnalytics */; };
+		BCD41E282DC8DD16007D03E5 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = BCD41E272DC8DD16007D03E5 /* FirebaseAnalyticsOnDeviceConversion */; };
+		BCD41E2A2DC8DD16007D03E5 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = BCD41E292DC8DD16007D03E5 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		BCD41E2C2DC8DD16007D03E5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BCD41E2B2DC8DD16007D03E5 /* FirebaseAuth */; };
+		BCD41E2E2DC8DD16007D03E5 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = BCD41E2D2DC8DD16007D03E5 /* FirebaseCore */; };
+		BCD41E302DC8DD16007D03E5 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = BCD41E2F2DC8DD16007D03E5 /* FirebaseCrashlytics */; };
+		BCD41E322DC8DD16007D03E5 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = BCD41E312DC8DD16007D03E5 /* FirebaseInstallations */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +68,9 @@
 		BC5E52472DC350C000B5E0A4 /* Exceptions for "MakeConversation" folder in "MakeConversation" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				"Configuration/Firebase/Development/GoogleService-Info.plist",
+				"Configuration/Firebase/Production/GoogleService-Info.plist",
+				"Configuration/Firebase/Staging/GoogleService-Info.plist",
 				Configuration/Info/Info.plist,
 			);
 			target = 1CF323682D8089380054F1D7 /* MakeConversation */;
@@ -94,12 +105,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCD41E262DC8DD16007D03E5 /* FirebaseAnalytics in Frameworks */,
+				BC4401502DCF4FE10064F775 /* Alamofire in Frameworks */,
+				BCD41E2C2DC8DD16007D03E5 /* FirebaseAuth in Frameworks */,
+				BCD41E322DC8DD16007D03E5 /* FirebaseInstallations in Frameworks */,
+				BCD41E2E2DC8DD16007D03E5 /* FirebaseCore in Frameworks */,
 				BC5E52532DC3562600B5E0A4 /* PostgREST in Frameworks */,
 				BC5E52512DC3562600B5E0A4 /* Functions in Frameworks */,
 				BC5E52592DC3562600B5E0A4 /* Supabase in Frameworks */,
 				BC5E524F2DC3562600B5E0A4 /* Auth in Frameworks */,
 				BC5E52572DC3562600B5E0A4 /* Storage in Frameworks */,
 				BC5E52552DC3562600B5E0A4 /* Realtime in Frameworks */,
+				BCD41E302DC8DD16007D03E5 /* FirebaseCrashlytics in Frameworks */,
+				BCD41E2A2DC8DD16007D03E5 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				BCD41E282DC8DD16007D03E5 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +168,7 @@
 			buildPhases = (
 				1CF323652D8089380054F1D7 /* Sources */,
 				1CF323662D8089380054F1D7 /* Frameworks */,
+				BC18C7892DCBB65200BAAF4E /* ShellScript */,
 				1CF323672D8089380054F1D7 /* Resources */,
 			);
 			buildRules = (
@@ -166,6 +186,14 @@
 				BC5E52542DC3562600B5E0A4 /* Realtime */,
 				BC5E52562DC3562600B5E0A4 /* Storage */,
 				BC5E52582DC3562600B5E0A4 /* Supabase */,
+				BCD41E252DC8DD16007D03E5 /* FirebaseAnalytics */,
+				BCD41E272DC8DD16007D03E5 /* FirebaseAnalyticsOnDeviceConversion */,
+				BCD41E292DC8DD16007D03E5 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				BCD41E2B2DC8DD16007D03E5 /* FirebaseAuth */,
+				BCD41E2D2DC8DD16007D03E5 /* FirebaseCore */,
+				BCD41E2F2DC8DD16007D03E5 /* FirebaseCrashlytics */,
+				BCD41E312DC8DD16007D03E5 /* FirebaseInstallations */,
+				BC44014F2DCF4FE10064F775 /* Alamofire */,
 			);
 			productName = MakeConversation;
 			productReference = 1CF323692D8089380054F1D7 /* Make Conversation.app */;
@@ -252,6 +280,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				BC5E524D2DC3562600B5E0A4 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+				BCD41E242DC8DD16007D03E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				BC44014E2DCF4FE10064F775 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1CF3236A2D8089380054F1D7 /* Products */;
@@ -288,6 +318,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BC18C7892DCBB65200BAAF4E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "     echo \"Copying GoogleService-Info.plist from ${GOOGLESERVICE_INFO_PLIST}\"\n     cp \"${GOOGLESERVICE_INFO_PLIST}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1CF323652D8089380054F1D7 /* Sources */ = {
@@ -464,6 +514,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MakeConversation/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MakeConversation/Configuration/Info/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
@@ -502,6 +553,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MakeConversation/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MakeConversation/Configuration/Info/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
@@ -686,6 +738,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MakeConversation/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MakeConversation/Configuration/Info/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
@@ -700,6 +753,7 @@
 				);
 				MARKETING_VERSION = "$(MARKETING_VERSION)";
 				PRODUCT_NAME = "$(PRODUCT_NAME)";
+				SUPABASE_FUNCTION_URL = "https://scsuhgcsymwzivavqiqq.supabase.co/functions/v1/sign-up";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -821,6 +875,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MakeConversation/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MakeConversation/Configuration/Info/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
@@ -835,6 +890,7 @@
 				);
 				MARKETING_VERSION = "$(MARKETING_VERSION)";
 				PRODUCT_NAME = "$(PRODUCT_NAME)";
+				SUPABASE_FUNCTION_URL = "https://scsuhgcsymwzivavqiqq.supabase.co/functions/v1/sign-up";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -963,6 +1019,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MakeConversation/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MakeConversation/Configuration/Info/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
@@ -1098,6 +1155,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MakeConversation/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MakeConversation/Configuration/Info/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
@@ -1220,6 +1278,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BC44014E2DCF4FE10064F775 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
 		BC5E524D2DC3562600B5E0A4 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/supabase/supabase-swift.git";
@@ -1228,9 +1294,22 @@
 				minimumVersion = 2.5.1;
 			};
 		};
+		BCD41E242DC8DD16007D03E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.12.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BC44014F2DCF4FE10064F775 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC44014E2DCF4FE10064F775 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		BC5E524E2DC3562600B5E0A4 /* Auth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BC5E524D2DC3562600B5E0A4 /* XCRemoteSwiftPackageReference "supabase-swift" */;
@@ -1260,6 +1339,41 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BC5E524D2DC3562600B5E0A4 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Supabase;
+		};
+		BCD41E252DC8DD16007D03E5 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCD41E242DC8DD16007D03E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		BCD41E272DC8DD16007D03E5 /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCD41E242DC8DD16007D03E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		BCD41E292DC8DD16007D03E5 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCD41E242DC8DD16007D03E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		BCD41E2B2DC8DD16007D03E5 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCD41E242DC8DD16007D03E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		BCD41E2D2DC8DD16007D03E5 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCD41E242DC8DD16007D03E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		BCD41E2F2DC8DD16007D03E5 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCD41E242DC8DD16007D03E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		BCD41E312DC8DD16007D03E5 /* FirebaseInstallations */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCD41E242DC8DD16007D03E5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseInstallations;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

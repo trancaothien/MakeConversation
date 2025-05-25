@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct InputView: View {
-    @State var email: String
-    @State var password: String
+    @Binding var email: String
+    @Binding var password: String
     
     var body: some View {
         VStack(alignment: .leading) {
-            InputField(title: "Email", isSecure: false, text: email)
+            InputField(title: "Email", isSecure: false, text: $email)
             
-            InputField(title: "Password", isSecure: true, text: password)
+            InputField(title: "Password", isSecure: true, text: $password)
         }
         .padding(.horizontal, 8)
     }
@@ -25,7 +25,7 @@ struct InputField: View {
     var title: String
     var isSecure: Bool
     
-    @State var text: String
+    @Binding var text: String
     
     var body: some View {
         VStack {
@@ -51,8 +51,4 @@ struct InputField: View {
             }
         }
     }
-}
-
-#Preview {
-    InputView(email: "", password: "")
 }

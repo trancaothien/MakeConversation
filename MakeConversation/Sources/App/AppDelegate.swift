@@ -7,12 +7,15 @@
 
 import Combine
 import Foundation
-import UIKit
+import SwiftUI
+import FirebaseCore
 
 @MainActor
 final class AppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
     
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+    func application(_ app: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        FirebaseApp.configure()
         return true
     }
+    
 }
