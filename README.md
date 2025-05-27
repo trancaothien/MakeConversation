@@ -31,6 +31,7 @@ MakeConversation is a modern chat application developed with Swift and SwiftUI, 
 - **SwiftData**: Local data storage (iOS 17+)
 
 ## Project Structure
+`
 MakeConversation/
 ├── Sources/
 │   ├── App/ # Application entry point
@@ -50,7 +51,7 @@ MakeConversation/
 ├── Resources/ # Resources (images, fonts, ...)
 └── Configuration/ # Environment configuration
     └── Firebase/ # Firebase configuration
-
+`
 
 ## Features
 
